@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Home from './component/home'
+import Mines from './component/mines'
+import Map from './component/map'
+import Design from './component/design'
+import { Router, Route } from 'react-router-dom';
+import history from './history'
+
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Router history={history}>
+      <div>
+        <Route path="/" component={Home} exact></Route>
+        <Route path="/design" component={Design} exact></Route>
+          <Route path="/design/mines" component={Mines}></Route>
+        <Route path="/design/map" component={Map}></Route>
+          
+          
+        {/* <Route path="/user" component={UserPage}></Route>
+        <Route path='/musicianReg' component={MusicianRegForm}></Route>
+        <Route path='/usrReg' component={CustomerRegForm}></Route>
+        <Route path='/profile/:value' name='profile' target="_blank" component={Profile}></Route>
+        <Route path='/signin' component={SignInPage}></Route>
+        <Route path='/musician' component={MusPage}></Route>
+        <Route path='/search' component={Search}></Route>
+        <Route path='/book' component={Book}></Route> */}
+
       </div>
+      
+      </Router>
+
     );
   }
 }
