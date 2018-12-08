@@ -1,15 +1,49 @@
 .t1{
   font-family: "Times New Roman";
-  font-size: 80px;
+  font-size: 70px;
+
   
+}
+
+.intro{
+  font-family: 'Times New Roman', Times, serif;
+  color:#555555;
+  font-size: 24px;
 }
 
 .t2{
   font-family: "Times New Roman";
   font-size: 24px;
+  font-weight: bold;
+}
+
+.ti{
+  font-family: "Times New Roman";
+  font-size: 56px;
+
+}
+
+.itemname{
+  font-family: "Times New Roman";
+  font-size: 24px;
+  font-weight: bold;
 }
 
 p{
   font-family: "Times New Roman";
   font-size: 20px;
+}
+
+.link {
+  color:#a8d889;
+}
+.link:hover {
+   color: #ffffff
+}
+
+.link2 {
+  color:#666666;
+}
+.link2:hover {
+   color: #004e36
 }

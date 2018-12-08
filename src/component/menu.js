@@ -1,61 +1,71 @@
 import React from 'react'
-import { Menu, Icon, Sidebar, Sticky } from 'semantic-ui-react'
+import { Menu, Icon, Modal, Divider, Grid, TransitionablePortal } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import history from '../history'
 
+import './font.css'
 
-export default class Menubar extends React.Component{
+export default class Menubar extends React.Component {
 
 
-  state={visible: false}
+  state = { open: false, back: this.props.back }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  handleHideClick = () => this.setState({ visible: false })
-  handleShowClick = () => this.setState({ visible: true })
-  handleSidebarHide = () => this.setState({ visible: false })
+  handleShowClick = () => this.setState({ open: true })
 
-  
+  handleSidebarHide = () => {
+    this.setState({ open: false })
+  }
+
+
+
   render() {
-    const { visible, activeItem, contextRef } = this.state
+    const { open, back } = this.state
+
+    var ic = {
+      color: "#004e36"
+
+    }
+  
 
     return (
       <div >
         <Menu borderless secondary >
-          <Menu.Menu position='left'>
+          {back ? <Menu.Menu position='left'>
             <Menu.Item>
-                <Icon name='arrow left' size='big' color='purple' onClick={history.goBack}/>
+              <Icon style={ic} name='arrow left' size='big' onClick={history.goBack} />
             </Menu.Item>
           </Menu.Menu>
-          
-        <Menu.Menu position='right'>
-          <Menu.Item>
-            <Icon name='sidebar' color='purple' size='big' onClick={this.handleShowClick}/>
-          </Menu.Item>
-      </Menu.Menu>
-      </Menu>
+            : null}
 
-      <Sidebar.Pusher dimmed={visible}>
-          <Sidebar as={Menu} animation='overlay' visible={visible} vertical
-            onHide={this.handleSidebarHide} direction='right'  width='wide'>
-          <Link to='/'>
-              <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick}>
-                ABOUT
-          </Menu.Item>
-            </Link>
-        
-          <Link to='/design'>
-              <Menu.Item name='design' active={activeItem === 'design'} onClick={this.handleItemClick}>
-              <Icon name='paint brush' position='left'/>DESIGN
-                </Menu.Item>
-          </Link>
-          
-        <Menu.Item name='code' active={activeItem === 'code'} onClick={this.handleItemClick}>
-          <Icon name='code'/>CODE
-        </Menu.Item>
-        </Sidebar>
-          </Sidebar.Pusher>
-        
-        </div>    
+
+          <Menu.Menu position='right'>
+            <Menu.Item>
+              <Icon style={ic} name='sidebar' size='big' onClick={this.handleShowClick} />
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
+
+        <TransitionablePortal open={open} transition={{ animation: 'fade left', duration: '300' }}>
+          <Modal basic open={open} onClose={this.handleSidebarHide}>
+            <Grid>
+              <Grid.Column width='12' />
+
+              <Grid.Column width='4'>
+                <Link to='/about' className='link'><div className='ti'>ABOUT</div></Link>
+                <Divider />
+                <Link to='/design' className='link'><div className='ti'>DESIGN</div>  </Link>
+                <Divider />
+                <Link to='/code' className='link'><div className='ti'>CODE</div></Link>
+              </Grid.Column>
+
+            </Grid>
+
+          </Modal>
+
+        </TransitionablePortal>
+
+
+      </div>
     )
   }
 }

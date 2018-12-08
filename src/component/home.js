@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, Header, Container } from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 import Menubar from './menu'
-import me from '../img/bg.jpg'
+import me from '../img/bg3.png'
 
 export default class Home extends React.Component{
 
@@ -17,13 +17,10 @@ export default class Home extends React.Component{
       backgroundPosition: 'center',
     }
 
-    const font = {
-      fontFamily: "Times New Roman"
-    }
-
     const info = {
       fontFamily: "Times New Roman",
-      fontSize: '20px'
+      fontSize: '24px',
+      color: '#ffffff'
 
     }
 
@@ -33,7 +30,7 @@ export default class Home extends React.Component{
       <div style={divStyle}>
       <Grid>
           <Grid.Column width='16'>
-            <Menubar/>
+            <Menubar back={false}/>
           </Grid.Column>
 
           <Grid.Row />
@@ -41,22 +38,25 @@ export default class Home extends React.Component{
 
           <Grid.Row/>
           <Grid.Row/>
+          <Grid.Row />
           <Grid.Row/>
-
-
+          <Grid.Row/>
+          <Grid.Row />
+          <Grid.Row/>
+          <Grid.Row/>
           <Grid.Column width='9' />
 
-          <Grid.Column width='7'>
-            <Header style={font} size='large' color='grey'>Portfolio</Header>            
-            <Header style={font} size='large'>Shuo YANG</Header>              
-            <Container text>
+          <Grid.Column width='5'>
+            <Container >
               <p style={info}>
                 From China, currently located in France.<br />
-                Study Optics Engineering for 4 years.<br/>
-                Love <b>Design</b>, <b>Coding</b> and <b>Dreaming</b>
+                Study Optics, Electronics and Programming for 4 years.<br />
+                Dive into HCID now.<br/>
+                Love <b>Design</b>, <b>Coding</b> and <b>Dreaming</b>.
+              
               </p>
 
-            </Container>
+              </Container>
 
 
     </Grid.Column>
