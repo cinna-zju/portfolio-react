@@ -5,6 +5,7 @@ import Menubar from './menu'
 import './font.css'
 
 import s1 from '../img/sofc/1.png'
+import homepage from '../img/sofc.png'
 
 export default class Sofc extends React.Component {
   state = {}
@@ -32,11 +33,20 @@ export default class Sofc extends React.Component {
             <Grid.Column width='12' textAlign='left'><div className='t1' >Sofc</div></Grid.Column>
           </Grid.Row>
 
+          <Grid.Row/>
+
           <Grid.Row>
             <Grid.Column width='14' textAlign='right'><div className='intro'>A musician booking website</div></Grid.Column>
 
           </Grid.Row>
           <Grid.Row />
+
+          <Grid.Row>
+            <Grid.Column width='2' />
+            <Grid.Column width='12'>
+              <Image src={homepage}/>
+            </Grid.Column>
+          </Grid.Row>
 
 
 

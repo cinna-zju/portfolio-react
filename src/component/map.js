@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Divider, Container, Sticky } from 'semantic-ui-react'
+import { Grid, Image, Divider, Container, Sticky, Embed } from 'semantic-ui-react'
 import Menubar from './menu'
 
 import './font.css'
@@ -159,7 +159,6 @@ export default class Map extends React.Component {
             - Polymorphism is to apply one interaction to different objects<br/>
               - Reuse is to reuse the previous input or conmmand<br />
               <br/>
-              
               (source: Beaudouin-Lafon M. Instrumental interaction: an interaction model for designing post-WIMP user interfaces[C]
               //Proceedings of the SIGCHI conference on Human Factors in Computing Systems. ACM, 2000: 446-453.)
                 
@@ -175,8 +174,10 @@ export default class Map extends React.Component {
 
         <Grid.Row >
           <Grid.Column width={2}/>
-          <Grid.Column width={12} textAlign='center'>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xB0Z_m1Ihic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <Grid.Column width={12} textAlign='center'>
+            <Embed id='xB0Z_m1Ihic' source='youtube' />
+
+            {/* <iframe title='Story' width="560" height="315" src="https://www.youtube.com/embed/xB0Z_m1Ihic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
             </Grid.Column>
           <Grid.Column width={2} />  
         </Grid.Row>

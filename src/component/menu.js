@@ -21,9 +21,17 @@ export default class Menubar extends React.Component {
   render() {
     const { open, back } = this.state
 
-    var ic = {
-      color: "#004e36"
+    var ic
 
+    if (this.props.reverted === true) {
+      ic = {
+        color: "#ffffff"
+      }
+    } else {
+      ic = {
+        color: "#555555"
+      }
+      
     }
   
 

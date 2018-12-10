@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Container, Sticky } from 'semantic-ui-react'
+import { Grid, Image, Container, Sticky, Transition } from 'semantic-ui-react'
 import Menubar from './menu'
 import { Link } from 'react-router-dom'
 
@@ -8,12 +8,18 @@ import map from '../img/map.png'
 
 
 export default class Design extends React.Component {
-  state = {}
+
+  state = {visible: false }
 
   handleContextRef = contextRef => this.setState({ contextRef })
 
+  componentDidMount() {
+    this.setState({ visible: true })
+
+  }
+
   render() {
-    const { contextRef } = this.state
+    const { contextRef, visible } = this.state
 
     return (
       <div ref={this.handleContextRef}>
@@ -32,7 +38,7 @@ export default class Design extends React.Component {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width='5' />
+            <Grid.Column width='6' />
             <Grid.Column width='8' textAlign='right'><Container className='intro'>
               Design is what we do to make human live better.
           </Container></Grid.Column>
@@ -44,11 +50,12 @@ export default class Design extends React.Component {
             <Grid.Column width='2'></Grid.Column>
 
             <Grid.Column width='5'>
-              <Link className='link2' to='./design/map'>
-                <Image rounded src={map}></Image>
-                <div className='itemname'><br />Cityller</div>
-
-              </Link>
+              <Transition visible={visible} animation='slide right' duration='500'>
+                <Link className='link2' to='./design/map'>
+                  <Image rounded src={map}></Image>
+                  <div className='itemname'><br />Cityller</div>
+                </Link>
+              </Transition>
 
             </Grid.Column>
           </Grid.Row>

@@ -7,6 +7,8 @@ import Design from './component/design'
 import Code from './component/code'
 import Sofc from './component/sofc'
 import About from './component/about'
+import Affectiva from './component/affectiva'
+
 import { Router, Route } from 'react-router-dom';
 import history from './history'
 
@@ -25,6 +27,8 @@ class App extends Component {
           <Route path="/code" component={Code} exact></Route>
           <Route path="/code/sofc" component={Sofc}></Route>
           <Route path="/code/mines" component={Mines}></Route>
+          <Route path="/code/affectiva" component={Affectiva}></Route>
+
           <Route path="/about" component={About}></Route>
 
 
