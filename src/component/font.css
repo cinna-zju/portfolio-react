@@ -1,5 +1,6 @@
 .t1{
   font-size: 70px;
+  
 
   
 }
@@ -24,8 +25,11 @@
   font-weight: bold;
 }
 
+.tl_header{
+  color:#84411f
+}
 p{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .link {
@@ -36,8 +40,16 @@ p{
 }
 
 .link2 {
-  color:#ecb88a;
+  color: #000000
 }
 .link2:hover {
+  color:#666666;
+
+}
+
+.link3 {
+  color:#ecb88a;
+}
+.link3:hover {
    color: #1c1c1c;
 }

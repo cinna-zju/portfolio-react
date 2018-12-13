@@ -1,23 +1,22 @@
 import React from 'react'
-import { Grid, Image, Divider, Container, Sticky, Embed } from 'semantic-ui-react'
+import { Grid, Image, Divider, Container, Sticky, Embed, Table} from 'semantic-ui-react'
 import Menubar from './menu'
 
 import './font.css'
 
-import wire from '../img/map/map_wire.png'
+import wire from '../img/map/wire.png'
 import wire_gif from '../img/map/process.gif'
-import map_gif from '../img/map/map-hi.gif'
 import paper from '../img/map/paper.jpg'
 
 export default class Map extends React.Component {
 
-  state={}
+  state = {}
 
   handleContextRef = contextRef => this.setState({ contextRef })
 
   render() {
     const { contextRef } = this.state
-    
+
     return (
       <div ref={this.handleContextRef}>
         <Grid>
@@ -25,32 +24,32 @@ export default class Map extends React.Component {
             <Sticky context={contextRef}>
               <Menubar back={true} />
             </Sticky>
-            </Grid.Column>
-            
-        
-        <Grid.Row textAlign='center'>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t1' >Cityller</div></Grid.Column>
+          </Grid.Column>
+
+
+          <Grid.Row textAlign='center'>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='12'><div className='t1' >Cityller</div></Grid.Column>
           </Grid.Row>
-          
+
           <Grid.Row>
-            <Grid.Column width='14' textAlign='right'><div className='intro'>City + Travller = Cityller, a map-based itinenary App</div></Grid.Column>
+            <Grid.Column width='13' textAlign='right'><div className='intro'>City + Travller = Cityller, a map-based itinenary App</div></Grid.Column>
 
           </Grid.Row>
 
-        <Grid.Row/>
+          <Grid.Row />
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column><div className='t2'>Background</div></Grid.Column>
-        </Grid.Row>
-        
-        <Grid.Row>
-          <Grid.Column width='2' />
-            <Grid.Column width='8'><Container>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column><div className='t2'>Background</div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container textAlign='justified'>
               <p>
-                Map Apps are almost the same nowadays so they have similiar problems. 
-                Here we redesign a Map App for mobile phone to help non-local travellers create their own itinerary quickly.      
+                Map Apps are almost the same nowadays so they have similiar problems.
+                Here we redesign a Map App for mobile phone to help non-local travellers create their own itinerary quickly.
               </p>
 
               <p>
@@ -59,162 +58,310 @@ export default class Map extends React.Component {
                 taught by Prof. Wendy Mackay at Université Paris Sud. My team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU.
               </p>
             </Container></Grid.Column>
-            <Grid.Column width='4'><Image rounded src={paper}></Image></Grid.Column>
-        </Grid.Row>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Image rounded src={paper} /></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Breakdown Analysis</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='12'><div className='t2'>Breakdown Analysis & User Profile </div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row >
-          <Grid.Column width={2}/>
-          <Grid.Column width={12}><Container><p>
-          - No suggested routes for tomorrow's transportation information<br/>
-          - Unexpected translation for place name<br/>
-          - Hard to notice metro direction<br/>
-          - Check routes a lot of times<br/>
-          </p>
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container><p>
+              We did 8 interviews about their experience using Google Maps and extracted these breakdown.<br />
+              <br></br>
+              - No suggested routes for tomorrow's transportation information<br />
+              - Unexpected translation for place name<br />
+              - Hard to notice metro direction<br />
+              - Check routes a lot of times<br />
+              <br />
+
+              Then we got the user profile from the common points of our interviews.<br />
+              <br />
+              Non-local tourist<br />
+              - non-technical background<br />
+              - age: 18 to 35<br />
+              - not have detailed plan before travel<br />
+              - social, willing to make new local friends
+
+            </p>
             </Container></Grid.Column>
-          <Grid.Column width={2} />  
-        </Grid.Row>
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Personnas</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Personnas</div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width={2}/>
-          <Grid.Column width={2} textAlign='center'>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='2' textAlign='center'>
               <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' circular />
               <p className='intro'>Jack<br /></p>
-          </Grid.Column>
+            </Grid.Column>
 
-            <Grid.Column width='9'>
+            <Grid.Column width='8'>
               <p>"I travel a lot and I usually change my mind where to go"</p>
-              <p>ABOUT<br/>
-              Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a 
+              <p><b>ABOUT</b><br />
+                Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a
                 series of artcles about life in Paris.</p>
-              <p>BEHAVIOR<br />
+              <p><b>BEHAVIOR</b><br />
                 - Interesed in non-popular but beautiful sites<br />
                 - Often changes his itinenary </p>
 
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row><Grid.Column width='2'/><Grid.Column width='12'><Divider/></Grid.Column></Grid.Row>
+          <Grid.Row><Grid.Column width='3' /><Grid.Column width='10'><Divider /></Grid.Column></Grid.Row>
 
           <Grid.Row >
-          <Grid.Column width={2}/>
-          <Grid.Column width={2} textAlign='center'>
+            <Grid.Column width='3' />
+            <Grid.Column width='2' textAlign='center'>
               <Image src='https://react.semantic-ui.com/images/avatar/large/molly.png' circular />
               <p className='intro'>Gabrielle<br /></p>
             </Grid.Column>
-            <Grid.Column width='9'>
-              <p>"I usually spend a lot of time to search what is the most interesting sightseeing 
+            <Grid.Column width='8'>
+              <p>"I usually spend a lot of time to search what is the most interesting sightseeing
                 and include them in an itinenary."</p>
-              <p>ABOUT<br/>
-                Gabrielle is a foreign student in UK.  She likes Jack's blog. 
+              <p><b>ABOUT</b><br />
+                Gabrielle is a foreign student in UK.  She likes Jack's blog.
                 This time, she wants to meet Jack in Paris and travel with Jack.
                 But She wants to make her itinerary more quickly when she is going to travel.</p>
-              <p>BEHAVIOR<br />
-              - Not travel too much</p>
+              <p><b>BEHAVIOR</b><br />
+                - Not travel too much</p>
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row><Grid.Column width='2'/><Grid.Column width='12'><Divider/></Grid.Column></Grid.Row>
+          <Grid.Row><Grid.Column width='3' /><Grid.Column width='10'><Divider /></Grid.Column></Grid.Row>
 
 
           <Grid.Row>
-          <Grid.Column width={2}/>
-          <Grid.Column width={2} textAlign='center'>
+            <Grid.Column width='3' />
+            <Grid.Column width='2' textAlign='center'>
               <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' circular />
               <p className='intro'>Ekko<br /></p>
-              
-          </Grid.Column>
 
-            <Grid.Column width='9'>
-              <p>"Paris is a charming city even in the ordinary streets."</p>
-              <p>ABOUT</p>
-              <p>Ekko is a local guide at Paris. He knows some intersting but unpopular places.</p>
+            </Grid.Column>
+
+            <Grid.Column width='8'>
+              <p>"Paris is a so charming even in the ordinary streets."</p>
+              <p><b>ABOUT</b><br />
+                Ekko is a local guide at Paris. He knows some intersting but unpopular places.</p>
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row><Divider/></Grid.Row>
+          <Grid.Row><Divider /></Grid.Row>
 
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Design Concept</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Design Concept</div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row >
-          <Grid.Column width={2}/>
-          <Grid.Column width={12}><Container><p>
-            Instrumental Design<br/>
-            The idea of instrumental design is dividing things into domain object or instrument. 
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container><p>
+              Instrumental Design<br />
+              Instumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.<br/>
+              The idea of instrumental design is dividing things into domain object or instrument.
             The key principles are reification, polymorphism and reuse.<br />
-            - Reification is to turn an operation into an object<br/>
-            - Polymorphism is to apply one interaction to different objects<br/>
+              - Reification is to turn an operation into an object<br />
+              - Polymorphism is to apply one interaction to different objects<br />
               - Reuse is to reuse the previous input or conmmand<br />
-              <br/>
+              <br />
               (source: Beaudouin-Lafon M. Instrumental interaction: an interaction model for designing post-WIMP user interfaces[C]
-              //Proceedings of the SIGCHI conference on Human Factors in Computing Systems. ACM, 2000: 446-453.)
-                
+              Proceedings of the SIGCHI conference on Human Factors in Computing Systems. ACM, 2000: 446-453.)
+
           </p>
             </Container></Grid.Column>
-          <Grid.Column width={2} />  
-        </Grid.Row>
+            <Grid.Column width={2} />
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Video Prototype</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Design Space</div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row >
-          <Grid.Column width={2}/>
-            <Grid.Column width={12} textAlign='center'>
-            <Embed id='xB0Z_m1Ihic' source='youtube' />
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='2'><p>Time</p></Grid.Column>
+            <Grid.Column width='4'><p>Syncronization</p>
+              <p>Routes on the same time using this App
+              </p></Grid.Column>
+            <Grid.Column width='4'><p>Asyncronizaiton</p>
+              <p>Routes on different time when adjusting the timeline
+              </p></Grid.Column>
+          </Grid.Row>
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='2'><p>Speed</p></Grid.Column>
+            <Grid.Column width='4'><p>High</p>
+              <p>Circle and add all the points in the circle.
+              </p></Grid.Column>
+            <Grid.Column width='4'><p>Low</p>
+              <p>Add points one by one
+              </p></Grid.Column>
+          </Grid.Row>
 
-            {/* <iframe title='Story' width="560" height="315" src="https://www.youtube.com/embed/xB0Z_m1Ihic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='2'><p>Action</p></Grid.Column>
+            <Grid.Column width='4'><p>Natural</p>
+              <p>Drag the point into the 'backpack'
+              </p></Grid.Column>
+            <Grid.Column width='4'><p>Less Natural</p>
+              <p>Click the point to add it to the 'backpack'
+              </p></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Functional Table</div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'>
+              <Table fixed>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.HeaderCell>Object</Table.HeaderCell>
+                    <Table.HeaderCell>Property</Table.HeaderCell>
+                    <Table.HeaderCell>Representation</Table.HeaderCell>
+                    <Table.HeaderCell>Function</Table.HeaderCell>
+                  </Table.Row>
+                </Table.Header>
+
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Cell>Route</Table.Cell>
+                    <Table.Cell>start, end, place</Table.Cell>
+                    <Table.Cell>line</Table.Cell>
+                    <Table.Cell>edit, create, notify</Table.Cell>
+
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Location</Table.Cell>
+                    <Table.Cell>information, tags</Table.Cell>
+                    <Table.Cell>ping</Table.Cell>
+                    <Table.Cell>add, delete, see detail</Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Time</Table.Cell>
+                    <Table.Cell>departure time, duration</Table.Cell>
+                    <Table.Cell>timeline</Table.Cell>
+                    <Table.Cell>change, set</Table.Cell>
+                  </Table.Row>
+
+                </Table.Body>
+              </Table>
+
+
+              <Table fixed>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.HeaderCell>Function</Table.HeaderCell>
+                    <Table.HeaderCell>Object</Table.HeaderCell>
+                    <Table.HeaderCell>Interaction</Table.HeaderCell>
+                    <Table.HeaderCell>Effect</Table.HeaderCell>
+                  </Table.Row>
+                </Table.Header>
+
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Cell>Edit</Table.Cell>
+                    <Table.Cell>Route</Table.Cell>
+                    <Table.Cell>Drag</Table.Cell>
+                    <Table.Cell>route changes with the drag point</Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Detail</Table.Cell>
+                    <Table.Cell>Location</Table.Cell>
+                    <Table.Cell>Click</Table.Cell>
+                    <Table.Cell>An information card showes up</Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Order</Table.Cell>
+                    <Table.Cell>Time</Table.Cell>
+                    <Table.Cell>Drag and drop</Table.Cell>
+                    <Table.Cell>change the order of visiting</Table.Cell>
+                  </Table.Row>
+
+                  <Table.Row>
+                    <Table.Cell>Set</Table.Cell>
+                    <Table.Cell>Time.Duration</Table.Cell>
+                    <Table.Cell>pinch</Table.Cell>
+                    <Table.Cell>the height of card changes with pinch</Table.Cell>
+                  </Table.Row>
+
+                </Table.Body>
+              </Table>
             </Grid.Column>
-          <Grid.Column width={2} />  
-        </Grid.Row>
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Wireframe</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Generative Walkthrough</div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row >
-          <Grid.Column width={2}/>
-          <Grid.Column width={9}>
-            <Image src={wire} rounded />
-          </Grid.Column>
-          <Grid.Column width={3}><Image src={wire_gif} ></Image></Grid.Column>
-          <Grid.Column width={2} />  
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><p>
+              - Location Reuse: Search history, history point(Drag), start and destination point(Drag)<br />
+              - Activity Reification: activity selector -> 'bakcpack' ->  bar<br />
+              - Events Polymorphism<br />
+              - Place Polymorphism<br />
+              - Place Reuse: favorite<br />
+              - Event Reification: delete, revise<br />
+              - Route Reuse: card view in the itinerary
+            </p></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='2'/>
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Hi-fi Prototype</div></Grid.Column>
-        </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Video Prototype</div></Grid.Column>
+          </Grid.Row>
 
-        <Grid.Row >
-          <Grid.Column width={2} />
-          <Grid.Column width={3}><Image /></Grid.Column>
-          <Grid.Column width={9}><Container><p>
-            pictures
-          </p>
-            </Container></Grid.Column>
-          <Grid.Column width={2} />  
-        </Grid.Row>
+
+
+
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='10' textAlign='center'>
+              <Embed id='xB0Z_m1Ihic' source='youtube' />
+
+              {/* <iframe title='Story' width="560" height="315" src="https://www.youtube.com/embed/xB0Z_m1Ihic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+            </Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Wireframe</div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='7'>
+              <Image src={wire} rounded />
+            </Grid.Column>
+            <Grid.Column width='3'><Image src={wire_gif} /></Grid.Column>
+
+          </Grid.Row>
+
+
+          <Grid.Row >
+            <Grid.Column width='6' />
+
+          </Grid.Row>
 
         </Grid>
-        </div>
+      </div>
 
-      
+
     )
   }
 

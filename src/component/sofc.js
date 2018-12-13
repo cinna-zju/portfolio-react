@@ -29,34 +29,34 @@ export default class Sofc extends React.Component {
           </Grid.Row>
 
           <Grid.Row textAlign='center'>
-            <Grid.Column width='2' />
+            <Grid.Column width='3' />
             <Grid.Column width='12' textAlign='left'><div className='t1' >Sofc</div></Grid.Column>
           </Grid.Row>
 
           <Grid.Row/>
 
           <Grid.Row>
-            <Grid.Column width='14' textAlign='right'><div className='intro'>A musician booking website</div></Grid.Column>
+            <Grid.Column width='13' textAlign='right'><div className='intro'>A musician booking website</div></Grid.Column>
 
           </Grid.Row>
           <Grid.Row />
 
           <Grid.Row>
-            <Grid.Column width='2' />
-            <Grid.Column width='12'>
-              <Image src={homepage}/>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'>
+              <Image src={homepage} rounded/>
             </Grid.Column>
           </Grid.Row>
 
 
 
           <Grid.Row>
-            <Grid.Column width='2' />
+            <Grid.Column width='3' />
             <Grid.Column><div className='t2'>Background</div></Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width='2' />
-            <Grid.Column width='12'><Container textAlign='justified'><p>From the idea of airbnb, we create a platform to connect musicians and customers.
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container textAlign='justified'><p>From the idea of airbnb, we create a platform to connect musicians and customers.
               Customers can book musicians from this website.
               Musicians can create their own homepage to show their brilliance.
               Customers can search and select their favorite musicians according to instruments, location and dates.</p>
@@ -65,19 +65,19 @@ export default class Sofc extends React.Component {
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column width='2' />
-            <Grid.Column width='12'>
+            <Grid.Column width='4' />
+            <Grid.Column width='8'>
               <Image src={s1} rounded />
             </Grid.Column>
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column width='2' />
+            <Grid.Column width='3' />
             <Grid.Column><div className='t2'>Implementation</div></Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width='2' />
-            <Grid.Column width='12'><Container><p>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container><p>
               This front-end is mainly built on React and Semantic-UI. The back-end is built on Google firebase.
 
             </p></Container></Grid.Column>

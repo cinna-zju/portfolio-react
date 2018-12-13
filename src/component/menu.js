@@ -25,11 +25,11 @@ export default class Menubar extends React.Component {
 
     if (this.props.reverted === true) {
       ic = {
-        color: "#ffffff"
+        color: "#ffffff",
       }
     } else {
       ic = {
-        color: "#555555"
+        color: "#8a6bbe"
       }
       
     }
@@ -59,6 +59,8 @@ export default class Menubar extends React.Component {
               <Grid.Column width='12' />
 
               <Grid.Column width='4'>
+                <Link to='/' className='link'><div className='ti'>HOME</div></Link>
+                <Divider />
                 <Link to='/about' className='link'><div className='ti'>ABOUT</div></Link>
                 <Divider />
                 <Link to='/design' className='link'><div className='ti'>DESIGN</div>  </Link>

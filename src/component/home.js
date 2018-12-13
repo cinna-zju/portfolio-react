@@ -37,7 +37,7 @@ export default class Home extends React.Component {
     }
 
     var gray = {
-      filter: 'grayscale(60%)',
+      filter: 'grayscale(80%)',
       boxShadow: '3px 3px 3px #555555',
 
       
@@ -47,7 +47,7 @@ export default class Home extends React.Component {
       // fontFamily: "Arial, Helvetica, sans-serif",
       fontFamily: "monospace",
 
-      fontSize: '20px',
+      fontSize: '22px',
 
       color: '#ffffff'
 
@@ -86,7 +86,7 @@ export default class Home extends React.Component {
                 23<br />
                 China -> France<br />
                 ENFP-A<br />
-                HCID student<br />
+                HCID master student<br />
 
               </p>
 
@@ -94,7 +94,7 @@ export default class Home extends React.Component {
           </Grid.Column>
 
           <Grid.Row />
-          <Grid.Row />
+          
 
 
           <Grid.Row>
