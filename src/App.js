@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import Home from './component/home'
 import Mines from './component/mines'
 import Map from './component/map'
-import Design from './component/design'
+import Projects from './component/projects'
 import Code from './component/code'
 import Sofc from './component/sofc'
-import About from './component/about'
 import Affectiva from './component/affectiva'
 
 import { Router, Route } from 'react-router-dom';
@@ -21,15 +20,14 @@ class App extends Component {
       <Router history={history}>
         <div>
           <Route path="/" component={Home} exact></Route>
-          <Route path="/design" component={Design} exact></Route>
-          <Route path="/design/map" component={Map}></Route>
+          <Route path="/projects" component={Projects} exact></Route>
+          <Route path="/projects/map" component={Map}></Route>
 
           <Route path="/code" component={Code} exact></Route>
-          <Route path="/code/sofc" component={Sofc}></Route>
-          <Route path="/code/mines" component={Mines}></Route>
-          <Route path="/code/affectiva" component={Affectiva}></Route>
+          <Route path="/projects/sofc" component={Sofc}></Route>
+          <Route path="/projects/mines" component={Mines}></Route>
+          <Route path="/projects/affectiva" component={Affectiva}></Route>
 
-          <Route path="/about" component={About}></Route>
 
 
         </div>

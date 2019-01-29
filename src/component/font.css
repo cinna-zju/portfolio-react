@@ -4,7 +4,7 @@ body{
 }
 
 .t1{
-  font-size: 4em;  
+  font-size: 2em;  
 }
 
 .intro{
@@ -17,29 +17,53 @@ body{
   font-weight: bold;
 }
 
-
-
-.itemname{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
 .tl_header{
   color:#84411f
 }
 
+.tl_text{
+  font-size: 1.3em;
+  color:#ffffff;
+}
+
+.tl_text .link{
+  color: #ffffff;
+
+}
+
 p{
-  font-size: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+p a{
+  /* font-weight: 900; */
+  text-decoration: underline;
+}
+p a:hover{
+  text-decoration: underline;
 }
 
 
 .link2 {
-  color: #000000
+  color: #333333
 }
 .link2:hover {
-  color:#666666;
+  color:#ff6f61;
+  transform: translate(0, -10px);
 
 }
+
+.link2:hover .screenshot{
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.link2 .name{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+
 
 .link3 {
   color:#ff6f61;
@@ -61,3 +85,9 @@ p{
   color: #333333;
   text-decoration: underline;
 }
+
+.preface a:hover{
+  /* color: #333333; */
+  text-decoration: underline;
+}
+

@@ -1,36 +1,29 @@
 import React from 'react'
-import { Grid, Image, Container, Sticky } from 'semantic-ui-react'
-import Menubar from './menu'
+import { Grid, Image, Container, Breadcrumb } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 import './font.css'
 
 import poster from '../img/affectiva/poster.jpg'
 
 export default class Affectiva extends React.Component {
-  state = {}
-
-  handleContextRef = contextRef => this.setState({ contextRef })
 
   render() {
-    const { contextRef } = this.state
 
     return (
-      <div ref={this.handleContextRef}>
 
         <Grid>
+        <Grid.Row>
+          <Grid.Column width='3' />
 
-          <Grid.Row>
-            <Grid.Column>
-              <Sticky context={contextRef}>
-                <Menubar back={true} />
-              </Sticky>
-            </Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row textAlign='center'>
-            <Grid.Column width='3' />
-            <Grid.Column width='12' textAlign='left'><div className='t1' >Affective Computing</div></Grid.Column>
-          </Grid.Row>
+          <Grid.Column textAlign='left' width='12'>
+            <Breadcrumb>
+              <Breadcrumb.Section link><Link to='/projects'>PROJECTS</Link></Breadcrumb.Section>
+              <Breadcrumb.Divider />
+              <Breadcrumb.Section active><div className='t1' >Emotion Detection</div></Breadcrumb.Section>
+            </Breadcrumb>
+          </Grid.Column>
+        </Grid.Row>
 
           <Grid.Row/>
 
@@ -81,8 +74,6 @@ export default class Affectiva extends React.Component {
             </p></Container></Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
-
 
     )
   }

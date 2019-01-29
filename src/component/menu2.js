@@ -1,7 +1,6 @@
 import React from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import history from '../history'
 
 import '../css/menu.css'
 
@@ -22,11 +21,11 @@ export default class Menubar extends React.Component {
             <Link to='/' className='link'><div>HOME</div></Link>
           </Menu.Item>
           <Menu.Item name='design' active={activeItem === 'design'} >
-            <Link to='/design' className='link'><div className='ti'>Design Projects</div>  </Link>
+            <Link to='/projects' className='link'><div className='ti'>PROJECTS</div>  </Link>
           </Menu.Item>
 
           <Menu.Item name='code' active={activeItem === 'code'} >
-            <Link to='/code' className='link'><div className='ti'>Projects</div></Link>
+            <Link to='/code' className='link'><div className='ti'>blahhh</div></Link>
 
           </Menu.Item>
 
