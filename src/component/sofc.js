@@ -56,17 +56,22 @@ export default class Sofc extends React.Component {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width='3' />
-            <Grid.Column width='10'><Container textAlign='justified'><p>From the idea of airbnb, we create a platform to connect musicians and customers.
-              Customers can book musicians from this website.
-              Musicians can create their own homepage to show their brilliance.
-              Customers can search and select their favorite musicians according to instruments, location and dates.</p>
-              <p>This is part of a project of <i>Business class</i> at ESSEC. 
+            <Grid.Column width='10'><Container textAlign='justified'>
+              <p>From the idea of airbnb, we create a platform to connect musicians and customers. 
+                Both musicians and customers register on the website. For musicians, they can provide their information,
+                like what kind of instruments they are playing, their location and their expected price. 
+                Also they can upload pictures and videos to their homepage making customers more familiar with them.
+                Customers can search and select their favorite musicians according to instruments, location, type and date.
+                Then customers can book a musician. </p>
+
+              <p>This idea is from Sora Park et al, students at ESSEC Paris, as a project of <i>Business class</i>. 
+              I am responsible for the development of the website.
               </p></Container></Grid.Column>
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column width='4' />
-            <Grid.Column width='8'>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'>
               <Image src={s1} rounded />
             </Grid.Column>
           </Grid.Row>
@@ -77,10 +82,18 @@ export default class Sofc extends React.Component {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width='3' />
-            <Grid.Column width='10'><Container><p>
-              This front-end is mainly built on React and Semantic-UI. The back-end is built on Google firebase.
-
-            </p></Container></Grid.Column>
+            <Grid.Column width='10'><Container>
+              <p>
+                This front-end is mainly built on React and Semantic-UI. The back-end is built on Google firebase. 
+                The user data are stored in firebase real-time database. The images users uploaded ares stored in the firebase storage.
+              </p>
+              <p>
+                For musicians, they can register, sign in/out, edit their profile, upload pictures and videos 
+                and check the booking information. For customers, they can register, sign in/out, search, 
+                view musician's profile and book a musician.
+              </p>
+            
+            </Container></Grid.Column>
           </Grid.Row>
 
 

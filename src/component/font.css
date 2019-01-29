@@ -1,43 +1,37 @@
-.t1{
-  font-size: 70px;
+body{
+  font-family: 'roboto';
   
+}
 
-  
+.t1{
+  font-size: 4em;  
 }
 
 .intro{
   color:#555555;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .t2{
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
-.ti{
-  font-size: 56px;
 
-}
 
 .itemname{
-  font-size: 24px;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
 .tl_header{
   color:#84411f
 }
+
 p{
-  font-size: 16px;
+  font-size: 100%;
 }
 
-.link {
-  color:#eeeeee;
-}
-.link:hover {
-   color: #888888
-}
 
 .link2 {
   color: #000000
@@ -48,8 +42,22 @@ p{
 }
 
 .link3 {
-  color:#ecb88a;
+  color:#ff6f61;
+  font-weight: 600;
 }
 .link3:hover {
-   color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+
+.preface{
+  font-weight: 900;
+  font-size: 6em;
+  color: #ff6f61;
+  line-height: 105%;
+}
+
+.preface a{
+  color: #333333;
+  text-decoration: underline;
 }

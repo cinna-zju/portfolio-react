@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Divider, Container, Sticky, Embed, Table} from 'semantic-ui-react'
+import { Grid, Image, Divider, Container, Sticky, Embed} from 'semantic-ui-react'
 import Menubar from './menu'
 
 import './font.css'
@@ -7,15 +7,18 @@ import './font.css'
 import wire from '../img/map/wire.png'
 import wire_gif from '../img/map/process.gif'
 import paper from '../img/map/paper.jpg'
+import hifi from '../img/map/hifi_map2.png'
 
 export default class Map extends React.Component {
 
-  state = {}
+  state={}  
 
   handleContextRef = contextRef => this.setState({ contextRef })
 
   render() {
     const { contextRef } = this.state
+
+
 
     return (
       <div ref={this.handleContextRef}>
@@ -33,8 +36,8 @@ export default class Map extends React.Component {
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column width='13' textAlign='right'><div className='intro'>City + Travller = Cityller, a map-based itinenary App</div></Grid.Column>
-
+            <Grid.Column width='3'/>
+            <Grid.Column width='10' textAlign='right'><p className='intro'>City + Travller = Cityller, a map-based itinenary App</p></Grid.Column>
           </Grid.Row>
 
           <Grid.Row />
@@ -54,40 +57,47 @@ export default class Map extends React.Component {
 
               <p>
                 This was originally a project of the class
-                <a className='link2' href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
+                <a className='link3' href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
                 taught by Prof. Wendy Mackay at Université Paris Sud. My team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU.
               </p>
             </Container></Grid.Column>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width='3' />
-            <Grid.Column width='10'><Image rounded src={paper} /></Grid.Column>
-          </Grid.Row>
+
 
           <Grid.Row>
             <Grid.Column width='3' />
-            <Grid.Column textAlign='left' width='12'><div className='t2'>Breakdown Analysis & User Profile </div></Grid.Column>
+            <Grid.Column textAlign='left' width='12'><div className='t2'>Breakdown Analysis</div></Grid.Column>
           </Grid.Row>
 
           <Grid.Row >
             <Grid.Column width='3' />
             <Grid.Column width='10'><Container><p>
-              We did 8 interviews about their experience using Google Maps and extracted these breakdown.<br />
-              <br></br>
+              We interviewed eight users, mainly university students in different domains,
+              about their experience using Google Maps last time and got these breakdowns.<br />
+              <br/>
               - No suggested routes for tomorrow's transportation information<br />
               - Unexpected translation for place name<br />
-              - Hard to notice metro direction<br />
+              - Hard to notice metro or bus direction<br />
               - Check routes a lot of times<br />
               <br />
+            </p>
+            </Container></Grid.Column>
+          </Grid.Row>
 
-              Then we got the user profile from the common points of our interviews.<br />
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='12'><div className='t2'>User Profile </div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Container><p>
+              Then we got the user profile from the common points of our interviewees.<br />
               <br />
               Non-local tourist<br />
-              - non-technical background<br />
               - age: 18 to 35<br />
               - not have detailed plan before travel<br />
               - social, willing to make new local friends
-
             </p>
             </Container></Grid.Column>
           </Grid.Row>
@@ -105,10 +115,10 @@ export default class Map extends React.Component {
             </Grid.Column>
 
             <Grid.Column width='8'>
-              <p>"I travel a lot and I usually change my mind where to go"</p>
-              <p><b>ABOUT</b><br />
+              <div className='intro'>"I travel a lot and I usually change my mind where to go"</div>
+              <p><br/><b>ABOUT</b><br />
                 Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a
-                series of artcles about life in Paris.</p>
+                series of articles about life in Paris.</p>
               <p><b>BEHAVIOR</b><br />
                 - Interesed in non-popular but beautiful sites<br />
                 - Often changes his itinenary </p>
@@ -125,9 +135,8 @@ export default class Map extends React.Component {
               <p className='intro'>Gabrielle<br /></p>
             </Grid.Column>
             <Grid.Column width='8'>
-              <p>"I usually spend a lot of time to search what is the most interesting sightseeing
-                and include them in an itinenary."</p>
-              <p><b>ABOUT</b><br />
+              <div className='intro'>"I usually spend a lot of time creating an itinenary."</div>
+              <p><br/><b>ABOUT</b><br />
                 Gabrielle is a foreign student in UK.  She likes Jack's blog.
                 This time, she wants to meet Jack in Paris and travel with Jack.
                 But She wants to make her itinerary more quickly when she is going to travel.</p>
@@ -148,9 +157,11 @@ export default class Map extends React.Component {
             </Grid.Column>
 
             <Grid.Column width='8'>
-              <p>"Paris is a so charming even in the ordinary streets."</p>
-              <p><b>ABOUT</b><br />
+              <div className='intro'>"Paris is a so charming even in the ordinary streets."</div>
+              <p><br/><b>ABOUT</b><br />
                 Ekko is a local guide at Paris. He knows some intersting but unpopular places.</p>
+              <p><b>BEHAVIOR</b><br />
+              - Know some place unusual</p>
             </Grid.Column>
           </Grid.Row>
 
@@ -165,23 +176,37 @@ export default class Map extends React.Component {
           <Grid.Row >
             <Grid.Column width='3' />
             <Grid.Column width='10'><Container><p>
-              Instrumental Design<br />
-              Instumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.<br/>
-              The idea of instrumental design is dividing things into domain object or instrument.
-            The key principles are reification, polymorphism and reuse.<br />
-              - Reification is to turn an operation into an object<br />
-              - Polymorphism is to apply one interaction to different objects<br />
-              - Reuse is to reuse the previous input or conmmand<br />
-              <br />
-              (source: Beaudouin-Lafon M. Instrumental interaction: an interaction model for designing post-WIMP user interfaces[C]
-              Proceedings of the SIGCHI conference on Human Factors in Computing Systems. ACM, 2000: 446-453.)
-
+              "help non-local travellers create their own itinerary quickly based on an highly
+              interactive map."<br/>
+             
           </p>
             </Container></Grid.Column>
-            <Grid.Column width={2} />
           </Grid.Row>
 
           <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Design Scenario</div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><p>
+            **Persona1**: Gabrielle **Persona2**: Ekko **Extreme Persona**: Jack<br/>
+            Date: Christmas vacation<br/>
+            Setting: Paris<br/>
+            Context: Jack travels to Paris and wants to meet Ekko. They are going to travel together<br/>
+            **step1**:  Jack wants to meet Ekko<br/>
+            input location -> show a suggested meeting point -> 1. tag 2. toggle 3. drag along the route<br/>
+            **step2**: They wants to make a travel plan<br/>
+            shake the phone to find interested places -> tap to view detailed info -> draw a circle to select locations/ draw line to select and order locations<br/>
+            **step3**: They wants to edit the travel plan<br/>
+            drag or click to delete<br/>
+            </p></Grid.Column>
+          </Grid.Row>
+
+
+
+          {/* <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column textAlign='left' width='10'><div className='t2'>Design Space</div></Grid.Column>
           </Grid.Row>
@@ -216,9 +241,9 @@ export default class Map extends React.Component {
             <Grid.Column width='4'><p>Less Natural</p>
               <p>Click the point to add it to the 'backpack'
               </p></Grid.Column>
-          </Grid.Row>
+          </Grid.Row> */}
 
-          <Grid.Row>
+          {/* <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column textAlign='left' width='10'><div className='t2'>Functional Table</div></Grid.Column>
           </Grid.Row>
@@ -301,6 +326,21 @@ export default class Map extends React.Component {
                 </Table.Body>
               </Table>
             </Grid.Column>
+          </Grid.Row> */}
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Paper Prototype</div></Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><p>
+              We created and tested our paper prototype.
+            </p></Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><Image rounded src={paper} /></Grid.Column>
           </Grid.Row>
 
           <Grid.Row>
@@ -311,6 +351,17 @@ export default class Map extends React.Component {
           <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column width='10'><p>
+              Here we use the principle of instrumental design to evaluate our product.
+              Instrumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.<br/><br/>
+              The idea of instrumental design is dividing things into domain object or instrument.
+              The key principles are reification, polymorphism and reuse.
+              Reification is to turn an operation into an object.
+              Polymorphism is to apply one interaction to different objects.
+              Reuse is to reuse the previous input or conmmand
+              <br /><br/>
+
+              Here are some points we got from this walkthrough.<br/><br/>
+              
               - Location Reuse: Search history, history point(Drag), start and destination point(Drag)<br />
               - Activity Reification: activity selector -> 'bakcpack' ->  bar<br />
               - Events Polymorphism<br />
@@ -323,7 +374,31 @@ export default class Map extends React.Component {
 
           <Grid.Row>
             <Grid.Column width='3' />
-            <Grid.Column textAlign='left' width='10'><div className='t2'>Video Prototype</div></Grid.Column>
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Improvements</div></Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column width='10'><p>
+            1. Add an interactive card for timeline<br/>
+            2. two-finger drawing<br/>
+            3. delete<br/>
+            4. make points in video more clear<br/>
+            5. make timeline in video more clear<br/>
+            6. Drag bottom line to set duration of event<br/>
+            7. Show travel plan in map<br/>
+            8. draw line to select and order<br/>
+            9. add breakdown for video<br/>
+            10. tilt to show control panel<br/>
+            11. shake to undo
+            </p></Grid.Column>
+          </Grid.Row>
+
+
+
+          <Grid.Row>
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Revised Design</div></Grid.Column>
           </Grid.Row>
 
 
@@ -338,7 +413,7 @@ export default class Map extends React.Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row>
+          {/* <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column textAlign='left' width='10'><div className='t2'>Wireframe</div></Grid.Column>
           </Grid.Row>
@@ -350,12 +425,19 @@ export default class Map extends React.Component {
             </Grid.Column>
             <Grid.Column width='3'><Image src={wire_gif} /></Grid.Column>
 
-          </Grid.Row>
+          </Grid.Row> */}
 
 
           <Grid.Row >
-            <Grid.Column width='6' />
+            <Grid.Column width='3' />
+            <Grid.Column textAlign='left' width='10'><div className='t2'>Hifi Prototype</div></Grid.Column>
+          </Grid.Row>
 
+          <Grid.Row >
+            <Grid.Column width='3' />
+            <Grid.Column width='10'>
+              <Image src={hifi} rounded />
+            </Grid.Column>
           </Grid.Row>
 
         </Grid>

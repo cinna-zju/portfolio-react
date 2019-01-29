@@ -28,7 +28,7 @@ export default class About extends React.Component {
               <Container className='t1'>ABOUT</Container>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
+          <Grid.Row> 
             <Grid.Column width='6' />
             <Grid.Column width='8' textAlign='right'><Container className='intro'>
               Hi, my name is Shuo YANG(杨烁).<br />
@@ -90,7 +90,7 @@ export default class About extends React.Component {
                   </Grid.Column>
                   <Grid.Column width='8'>
                     <Header size='medium' icon='university' content='Studied Engineering'></Header>
-                    <p>Spent 4 years at Zhejiang University studying optics, electronics and programming.Got a lot of friends there.</p>
+                    <p>Spent 4 years at Zhejiang University studying optics, electronics and programming.</p>
                     <Divider />
                   </Grid.Column>
                 </Grid.Row>
@@ -104,7 +104,7 @@ export default class About extends React.Component {
                     <Header icon='android' content='My first APP' size='medium'></Header>
                     <p>Developed an information gathering App to collect University News</p>
                     <Header icon='plane' content='First time abroad' size='medium'></Header>
-                    <p>Conducting a summer research <Link to='/code/affectiva' className='link2'>project</Link> at NCSU, USA.
+                    <p>Conducting a summer research <Link to='/code/affectiva' className='link3'>project</Link> at NCSU, USA.
   </p>
                     <Divider />
 
