@@ -4,11 +4,8 @@ import { Link } from 'react-router-dom'
 
 import './font.css'
 
-import m2 from '../img/mine/2.png'
-import m3 from '../img/mine/3.png'
 import m4 from '../img/mine/4.png'
 import m5 from '../img/mine/5.png'
-import m6 from '../img/mine/6.png'
 
 import dt from '../img/mine/dtr.gif'
 
@@ -85,12 +82,8 @@ export default class Mines extends React.Component {
 
         <Grid.Row>
           <Grid.Column width='4' />
-          <Grid.Column width='3'>
-            <Image src={m2} />
-            <p></p>
-            <Image src={m6} />
-          </Grid.Column>
-          <Grid.Column width='6'><Image src={m3} /></Grid.Column>
+          <Grid.Column width='6'><Image src={dt} bordered /></Grid.Column>
+          <Grid.Column width='3'><Image src={m4} /><p></p><Image src={m5} /></Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
@@ -107,14 +100,7 @@ export default class Mines extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='4' />
-          <Grid.Column width='6'><Image src={dt} bordered /></Grid.Column>
-          <Grid.Column width='3'><Image src={m4} /><p></p><Image src={m5} /></Grid.Column>
 
-
-
-        </Grid.Row>
       </Grid>
 
 

@@ -1,9 +1,12 @@
 import React from 'react'
-import { Grid, Header, Icon, Popup } from 'semantic-ui-react'
+import { Grid, Icon, Popup, Image } from 'semantic-ui-react'
 import Menubar from './menu2'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import './font.css'
+
+import avatar from '../img/tx.jpeg'
+import map from '../img/been.jpeg'
 
 
 
@@ -21,24 +24,24 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const timeline = {
-      background: "#ffbe61",
-      color: '#ffffff',
+    const hh1 = {
+      color: 'grey',
+      fontSize: '6em',
 
     }
-    const collection = {
-      background: "#8b80ff",
-      color: '#ffffff',
-
-    }
-
-
-
 
     return (
 
-      <Grid>
+      <Grid padded='vertically'>
 
+        <Grid.Row>
+          {/* <Grid.Column width='12' />
+          <Grid.Column width='4' textAlign='center'>
+            <Header icon='linkedin' color='blue' as='a' />
+            <Header icon='github' color='black' as='a' href='https://github.com/cinna-zju'></Header>
+
+          </Grid.Column> */}
+        </Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
@@ -49,19 +52,14 @@ export default class Home extends React.Component {
 
         <Grid.Row>
           <Grid.Column width={1} />
-          <Grid.Column width={10}>
-            <p className='preface'>Bonjour. <br />I'm <Popup size='large' position='right center' trigger={<a>Shuo</a>}>Shuo Yang, and my Chinese name is 杨烁.</Popup>,<br />
-              a <Popup size='large' position='bottom left' trigger={<a>HCID</a>}>Human Computer Interaction and Design</Popup> student.</p>
+          <Grid.Column width={8}>
+            <p className='preface'>Bonjour, <br />I'm Shuo,<br />
+              a <Popup size='large' position='bottom left' trigger={<u>HCID</u>}>Human Computer Interaction and Design</Popup> student.</p>
           </Grid.Column>
+          <Grid.Column width='6'><Image src={avatar} /></Grid.Column>
         </Grid.Row>
         {/* ENFP-A */}
 
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
@@ -69,117 +67,99 @@ export default class Home extends React.Component {
         <Grid.Row verticalAlign='bottom' >
           <Grid.Column width='1' />
           <Grid.Column width='14' textAlign='left'>
-            <Menubar active='home' />
+            <Menubar active='home' color='black' />
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-
-
-
-        <Grid.Row style={timeline}>
-          <Grid.Column width='1' />
-          {/* <Grid.Column width='6'><p>Timeline</p></Grid.Column>  */}
-        </Grid.Row>
-
-
-        <Grid.Row style={timeline} verticalAlign='middle'>
-          <Grid.Column width='1' />
-          <Grid.Column width='4' textAlign='center'>
-
-            <Icon name='child' size='huge'></Icon>
-            <p className="tl_text"><br />I was born in Yichang, China, a small city near Yangzt River</p>
-
-          </Grid.Column>
-          <Grid.Column width='1'>
-            <Icon name='arrow right' size='huge' />
-          </Grid.Column>
-          <Grid.Column width='4' textAlign='center'>
-            <Icon name='map marker alternate' size='huge'></Icon>
-            <p className="tl_text"><br />Travel to Beijing. 1000+ km away from home</p>
-          </Grid.Column>
-          <Grid.Column width='1'>
-            <Icon name='arrow right' size='huge' />
-          </Grid.Column>
-
-          <Grid.Column width='4' textAlign='center'>
-            <Icon name='quidditch' size='huge'></Icon>
-            <p className="tl_text"><br />Read Harry Potter book 1 to 6 for 4 times.</p>
-          </Grid.Column>
-
-        </Grid.Row>
-
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline}>
-          <Grid.Column width='12'></Grid.Column>
-          <Grid.Column width='2' textAlign='center'>
-            <Icon name='arrow down' size='huge' />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row style={timeline} />
-
-
-        <Grid.Row style={timeline} verticalAlign='middle'>
-          <Grid.Column width='1' />
-          <Grid.Column width='4' textAlign='center'>
-            <Icon name='university' size='huge'></Icon>
-            <p className="tl_text"><br />Spent 4 years at Zhejiang University studying optics, electronics and programming.</p>
-          </Grid.Column>
-
-          <Grid.Column width='1'>
-            <Icon name='arrow left' size='huge' />
-          </Grid.Column>
-
-          <Grid.Column width='4' textAlign='center'>
-            <Icon name='plane' size='huge'></Icon>
-            <p className="tl_text"><br />Conducting a summer research <Link to='/projects/affectiva' className='link'>project</Link> at NCSU, USA.</p>
-          </Grid.Column>
-
-          <Grid.Column width='1'>
-            <Icon name='arrow left' size='huge'></Icon>
-          </Grid.Column>
-
-          <Grid.Column width='4' textAlign='center'>
-            <Icon name='university' size='huge'></Icon>
-            <p className="tl_text"><br />Master student of EIT Digital Academy. First year at Université Paris Sud, France</p>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline}>
-          <Grid.Column width='2' />
-          <Grid.Column width='2' textAlign='center'>
-            <Icon name='arrow down' size='huge' />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row style={timeline} />
-
-
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-        <Grid.Row style={timeline} />
-
-        <Grid.Row style={collection} />
-
-        <Grid.Row style={collection} />
-        <Grid.Row style={collection} />
-        <Grid.Row style={collection}>
-
-
-        </Grid.Row>
+        <Grid.Row />
 
         <Grid.Row>
-          <Grid.Column width='6' />
+          <Grid.Column width='16' textAlign='center'><div style={hh1}>WHO AM I?</div></Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row />
+        <Grid.Row />
+        <Grid.Row />
+        <Grid.Row />
+
+
+        <Grid.Row verticalAlign='middle'>
+          <Grid.Column width='1' />
           <Grid.Column width='4' textAlign='center'>
-            <Header icon='linkedin' color='blue' as='a' />
-            <Header icon='mail' color='grey' as='a' />
-            <Header icon='github' color='black' as='a' href='https://github.com/cinna-zju'></Header>
+
+            <Icon name='child' size='huge' color='grey'></Icon>
+
+
+          </Grid.Column>
+          <Grid.Column width='1' />
+          <Grid.Column width='4' textAlign='center'>
+            <Icon name='map marker alternate' size='huge' color='grey'></Icon>
+
+          </Grid.Column>
+          <Grid.Column width='1'></Grid.Column>
+
+          <Grid.Column width='4' textAlign='center'>
+            <Icon name='quidditch' size='huge' color='grey'></Icon>
           </Grid.Column>
         </Grid.Row>
+
+        <Grid.Row >
+          <Grid.Column width='1' />
+          <Grid.Column width='4'>
+            <p className="tl_text"><br />Grown up in Yichang, China, a city near the 3rd longest river in the world.</p>
+          </Grid.Column>
+          <Grid.Column width='1' />
+          <Grid.Column width='4'>
+            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<u>travelling</u>}><Image size='massive' src={map} /></Popup> and want to experience more.
+            <br />Hope to set foot on all the seven continents.</p>
+          </Grid.Column>
+          <Grid.Column width='1' />
+          <Grid.Column width='4'>
+            <p className="tl_text"><br />Big fan of Harry Potter.<br />Read Harry Potter book 1 to 6 for 4 times in the summer vacation when I was 12.</p>
+          </Grid.Column>
+        </Grid.Row >
+
+        <Grid.Row />
+        <Grid.Row >
+          <Grid.Column width='12'></Grid.Column>
+          <Grid.Column width='2' textAlign='center'></Grid.Column>
+        </Grid.Row>
+        <Grid.Row />
+
+
+        <Grid.Row verticalAlign='middle'>
+          <Grid.Column width='1' />
+          <Grid.Column width='4' textAlign='center'>
+            <Icon name='university' size='huge' color='grey'></Icon>
+          </Grid.Column>
+
+          <Grid.Column width='1'></Grid.Column>
+
+          <Grid.Column width='4' textAlign='center'>
+            <Icon name='plane' size='huge' color='grey'></Icon>
+          </Grid.Column>
+
+          <Grid.Column width='1'></Grid.Column>
+
+          <Grid.Column width='4' textAlign='center'>
+            <Icon name='university' size='huge' color='grey'></Icon>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Column width='1' />
+        <Grid.Column width='4'>
+          <p className="tl_text"><br />Studied optics, electronics and programming at Zhejiang University.
+            <br />Now, master student of EIT Digital Academy. First year at Université Paris Sud, France</p>
+        </Grid.Column>
+        <Grid.Column width='1' />
+        <Grid.Column width='4'><p className="tl_text"></p>
+        </Grid.Column>
+        <Grid.Column width='1' />
+        <Grid.Column width='4'>
+          <p className="tl_text"><br /></p>
+        </Grid.Column>
+        <Grid.Row />
+
 
 
       </Grid >

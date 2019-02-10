@@ -7,10 +7,7 @@ body{
   font-size: 2em;  
 }
 
-.intro{
-  color:#555555;
-  font-size: 1.5em;
-}
+
 
 .t2{
   font-size: 1.5em;
@@ -22,41 +19,51 @@ body{
 }
 
 .tl_text{
-  font-size: 1.3em;
-  color:#ffffff;
+  font-size: 1.1em;
+  color: grey;
 }
 
 .tl_text .link{
-  color: #ffffff;
+  color: grey;
 
 }
 
 p{
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: normal;
 }
-
-p a{
-  /* font-weight: 900; */
-  text-decoration: underline;
-}
-p a:hover{
-  text-decoration: underline;
-}
-
 
 .link2 {
-  color: #333333
+  color: #333333;
+
 }
+
 .link2:hover {
-  color:#ff6f61;
-  transform: translate(0, -10px);
+  color:#2277ba;
 
 }
 
-.link2:hover .screenshot{
-  filter: drop-shadow(8px 8px 10px gray);
+.screenshot{
+  box-shadow: 0 1px 2px rgba(22,120,175,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+
 }
+
+.screenshot:hover{
+  box-shadow: 0 5px 15px rgba(22,120,175,0.3);
+}
+
+/* .screenshot::after{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.screenshot:hover::after{
+  opacity: 1;
+} */
+
+
 
 .link2 .name{
   font-size: 1.5em;
@@ -65,12 +72,15 @@ p a:hover{
 
 
 
-.link3 {
-  color:#ff6f61;
-  font-weight: 600;
+p a {
+  color: #7f7f7f;
+  
 }
-.link3:hover {
-  color: #1c1c1c;
+p a:hover {
+  color: #7f7f7f;
+  text-decoration: underline;
+  text-decoration-color: #ffdc00;
+  
 }
 
 
@@ -87,7 +97,8 @@ p a:hover{
 }
 
 .preface a:hover{
-  /* color: #333333; */
+  color: #333333;
   text-decoration: underline;
+  text-decoration-color: #ffdc00;
 }
 

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Grid, Image, Divider, Container, Breadcrumb, Embed } from 'semantic-ui-react'
+import { Grid, Image, Divider, Container, Breadcrumb } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-
 
 import './font.css'
 
@@ -10,10 +9,7 @@ import hifi from '../img/map/hifi_map2.png'
 
 export default class Map extends React.Component {
 
-
   render() {
-
-
 
     return (
       <Grid padded='vertically'>
@@ -31,7 +27,7 @@ export default class Map extends React.Component {
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column width='10' textAlign='right'><p className='intro'>City + Travller = Cityller, a map-based itinenary App</p></Grid.Column>
+          <Grid.Column width='10' textAlign='right'><p className='intro'>A map-based itinenary App designed for city traveller</p></Grid.Column>
         </Grid.Row>
 
         <Grid.Row />
@@ -45,15 +41,11 @@ export default class Map extends React.Component {
           <Grid.Column width='3' />
           <Grid.Column width='10'><Container textAlign='justified'>
             <p>
-              Map Apps are almost the same nowadays so they have similiar problems.
-              Here we redesign a Map App for mobile phone to help non-local travellers create their own itinerary quickly.
+              This is a project of a one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
+              taught by Prof. Wendy Mackay at Université Paris Sud. We re-designed a map App for mobile phone to help non-local travellers create their own itinerary quickly.
               </p>
 
-            <p>
-              This was originally a project of the class
-                <a className='link3' href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
-              taught by Prof. Wendy Mackay at Université Paris Sud. My team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU.
-              </p>
+            <p>Our team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU. We discussed and did the project together.</p>
           </Container></Grid.Column>
         </Grid.Row>
 
@@ -65,40 +57,40 @@ export default class Map extends React.Component {
 
         <Grid.Row >
           <Grid.Column width='3' />
-          <Grid.Column width='10'><Container><p>
-            We interviewed eight users, mainly university students in different domains,
-              about their experience using Google Maps last time and got these breakdowns.<br />
+          <Grid.Column width='10'><p>
+            We interviewed eight users, mainly university students in different domains about their story of using Google Maps. Some questions we asked are the following:<br />
+            - Do you remember the experience using Google Maps last time?<br />
+            - Can you show me what did you do?<br/>
+            - Is there anything unexpected happened?<br/>
+            Then we got these breakdowns.<br />
             <br />
-            - No suggested routes for tomorrow's transportation information<br />
+            - Spend a lot of time making an itinenary before travel<br />
             - Unexpected translation for place name<br />
             - Hard to notice metro or bus direction<br />
             - Check routes a lot of times<br />
             <br />
           </p>
-          </Container></Grid.Column>
+          </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='12'><div className='t2'>User Profile </div></Grid.Column>
+          <Grid.Column textAlign='left' width='12'><div className='t2'>User Profile & Personas </div></Grid.Column>
         </Grid.Row>
 
         <Grid.Row >
           <Grid.Column width='3' />
-          <Grid.Column width='10'><Container><p>
+          <Grid.Column width='10'><p>
             Then we got the user profile from the common points of our interviewees.<br />
             <br />
             Non-local tourist<br />
-            - age: 18 to 35<br />
-            - not have detailed plan before travel<br />
-            - social, willing to make new local friends
+            - make an rough itinerary before travel<br />
+            - familiar with phone<br/>
+            - only use map apps to navigate while travelling<br/>
             </p>
-          </Container></Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'><div className='t2'>Personnas</div></Grid.Column>
+            <p>Then we create 3 personas to represent users of our products.
+              And Jack is an extreme personna we used to test the usability.</p>
+          </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
@@ -109,14 +101,14 @@ export default class Map extends React.Component {
           </Grid.Column>
 
           <Grid.Column width='8'>
-            <div className='intro'>"I travel a lot and I usually change my mind where to go"</div>
-            <p><br /><b>ABOUT</b><br />
-              Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a
+            <p>Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a
                 series of articles about life in Paris.</p>
-            <p><b>BEHAVIOR</b><br />
-              - Interesed in non-popular but beautiful sites<br />
-              - Often changes his itinenary </p>
-
+            <p>BEHAVIOR</p>
+              <p>- Interesed in non-popular but beautiful sites<br/>
+              - Often change his itinenary<br />
+              - Have a lot of places to visit<br/>
+            - Want to make his itinerary as soon as possible</p>
+            
           </Grid.Column>
         </Grid.Row>
 
@@ -129,13 +121,11 @@ export default class Map extends React.Component {
             <p className='intro'>Gabrielle<br /></p>
           </Grid.Column>
           <Grid.Column width='8'>
-            <div className='intro'>"I usually spend a lot of time creating an itinenary."</div>
-            <p><br /><b>ABOUT</b><br />
-              Gabrielle is a foreign student in UK.  She likes Jack's blog.
+              <p>Gabrielle is a foreign student in UK.  She likes Jack's blog.
               This time, she wants to meet Jack in Paris and travel with Jack.
                 But She wants to make her itinerary more quickly when she is going to travel.</p>
-            <p><b>BEHAVIOR</b><br />
-              - Not travel too much</p>
+            <p>BEHAVIOR</p>
+              <p>- Not travel too much</p>
           </Grid.Column>
         </Grid.Row>
 
@@ -147,15 +137,13 @@ export default class Map extends React.Component {
           <Grid.Column width='2' textAlign='center'>
             <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' circular />
             <p className='intro'>Ekko<br /></p>
-
           </Grid.Column>
 
           <Grid.Column width='8'>
-            <div className='intro'>"Paris is a so charming even in the ordinary streets."</div>
-            <p><br /><b>ABOUT</b><br />
+            <p>
               Ekko is a local guide at Paris. He knows some intersting but unpopular places.</p>
-            <p><b>BEHAVIOR</b><br />
-              - Know some place unusual</p>
+            <p>BEHAVIOR</p>
+              <p>- Know some place unusual</p>
           </Grid.Column>
         </Grid.Row>
 
@@ -170,8 +158,9 @@ export default class Map extends React.Component {
         <Grid.Row >
           <Grid.Column width='3' />
           <Grid.Column width='10'><Container><p>
-            "help non-local travellers create their own itinerary quickly based on an highly
-              interactive map."<br />
+            Help non-local travellers create their own itinerary quickly based on an highly interactive map.<br />
+            In the past, it is very common to draw and mark something on a paper map. 
+            So we want to bring this idea to the mobile device. Users can draw something on the map to create their itinerary.
 
           </p>
           </Container></Grid.Column>
@@ -329,7 +318,7 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'><p>
-            We created and tested our paper prototype.
+            We made and tested our paper prototype.
             </p></Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -344,17 +333,17 @@ export default class Map extends React.Component {
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column width='10'><p>
-            Here we use the principle of instrumental design to evaluate our product.
-              Instrumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.<br /><br />
-            The idea of instrumental design is dividing things into domain object or instrument.
+          <Grid.Column width='10'>
+            <p>We use the principle of <b>instrumental design</b> to evaluate our prototype.</p>
+            <p>Instrumental interaction was brought up by Michel Beaudouin-Lafon in his
+              <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'> paper</a>.
+            The idea is dividing things into domain object and instrument.
             The key principles are reification, polymorphism and reuse.
             Reification is to turn an operation into an object.
             Polymorphism is to apply one interaction to different objects.
-            Reuse is to reuse the previous input or conmmand
-              <br /><br />
+            Reuse is to reuse the previous input or conmmand</p>
 
-            Here are some points we got from this walkthrough.<br /><br />
+            <p>Here are some points we got from this walkthrough.<br /><br />
 
             - Location Reuse: Search history, history point(Drag), start and destination point(Drag)<br />
             - Activity Reification: activity selector -> 'bakcpack' ->  bar<br />
@@ -374,57 +363,30 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'><p>
-            1. Add an interactive card for timeline<br />
-            2. two-finger drawing<br />
-            3. delete<br />
-            4. make points in video more clear<br />
-            5. make timeline in video more clear<br />
-            6. Drag bottom line to set duration of event<br />
-            7. Show travel plan in map<br />
-            8. draw line to select and order<br />
-            9. add breakdown for video<br />
-            10. tilt to show control panel<br />
-            11. shake to undo
+            1. Add an interactive area for timeline showing different kinds of information.<br />
+            2. Two-finger drawing<br />
+            3. Delete<br />
+            4. Drag bottom line to set duration of event<br />
+            5. Draw line to select and order<br />
             </p></Grid.Column>
         </Grid.Row>
-
-
 
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column textAlign='left' width='10'><div className='t2'>Revised Design</div></Grid.Column>
         </Grid.Row>
 
-
-
-
-        <Grid.Row >
+        {/* <Grid.Row >
           <Grid.Column width='3' />
-          <Grid.Column width='10' textAlign='center'>
-            <Embed id='xB0Z_m1Ihic' source='youtube' />
-
-            {/* <iframe title='Story' width="560" height="315" src="https://www.youtube.com/embed/xB0Z_m1Ihic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+          <Grid.Column width='10'>
+            <p>According to these improvements, we added some interaction to the prototype and shot a new video.</p>
+            <Embed id='xB0Z_m1Ihic' source='youtube' brandedUI/>
           </Grid.Column>
-        </Grid.Row>
-
-        {/* <Grid.Row>
-            <Grid.Column width='3' />
-            <Grid.Column textAlign='left' width='10'><div className='t2'>Wireframe</div></Grid.Column>
-          </Grid.Row>
-
-          <Grid.Row >
-            <Grid.Column width='3' />
-            <Grid.Column width='7'>
-              <Image src={wire} rounded />
-            </Grid.Column>
-            <Grid.Column width='3'><Image src={wire_gif} /></Grid.Column>
-
-          </Grid.Row> */}
-
+        </Grid.Row> */}
 
         <Grid.Row >
           <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'><div className='t2'>Hifi Prototype</div></Grid.Column>
+          <Grid.Column textAlign='left' width='10'><div className='t2'>Prototype</div></Grid.Column>
         </Grid.Row>
 
         <Grid.Row >

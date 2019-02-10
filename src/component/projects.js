@@ -5,23 +5,16 @@ import { Link } from 'react-router-dom'
 
 import './font.css'
 import map from '../img/map.png'
-import mines from '../img/mine/mine.jpg'
-import sofc from '../img/sofc.png'
+import mines from '../img/mine.png'
 import aff from '../img/aff.png'
+import info from '../img/infovis.png'
+import splash from '../img/splash.png'
 
 
 export default class Projects extends React.Component {
 
   render() {
 
-    const bg = {
-      background: "#f7f7f7",
-      // background: "#61a2ff",
-
-    }
-    const bg2 = {
-      background: "#61a2ff",
-    }
     return (
       <div>
 
@@ -32,7 +25,7 @@ export default class Projects extends React.Component {
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
-
+          <Grid.Row></Grid.Row>
 
           <Grid.Row>
             <Grid.Column width={1} />
@@ -52,21 +45,15 @@ export default class Projects extends React.Component {
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
 
-
-          <Grid.Row>
+          <Grid.Row verticalAlign='bottom'>
             <Grid.Column width='1' />
             <Grid.Column width='15'>
-              <Menubar active='design' />
+              <Menubar active='design' color='blue'/>
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row style={bg2} />
-          <Grid.Row style={bg} />
-          <Grid.Row style={bg} />
-
-          <Grid.Row style={bg}>
+          <Grid.Row >
             <Grid.Column width='2'></Grid.Column>
 
             <Grid.Column width='5'>
@@ -85,9 +72,9 @@ export default class Projects extends React.Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row style={bg}/>
+          <Grid.Row/>
 
-          <Grid.Row style={bg}>
+          <Grid.Row>
             <Grid.Column width='2'></Grid.Column>
             {/* <Grid.Column width='5'>
               <Link className='link2' to='/projects/sofc'>
@@ -104,11 +91,38 @@ export default class Projects extends React.Component {
               </Link>
             </Grid.Column>
 
-            <Grid.Column width='1'/>
+            <Grid.Column width='1' />
+            
+            <Grid.Column width='5'>
+              <Link className='link2' to='/projects/infovis'>
+                <Image className='screenshot' rounded src={info}></Image>
+                <div className='name'><br />Visualization</div>
+              </Link>
+            </Grid.Column>
 
 
           </Grid.Row>
+
+          <Grid.Row >
+            <Grid.Column width='2'></Grid.Column>
+
+            <Grid.Column width='5'>
+              <Link className='link2' to='./projects/splash'>
+                <Image className='screenshot' rounded src={splash}></Image>
+                <div className='name'><br />Splash</div>
+              </Link>
+            </Grid.Column>
+            <Grid.Column width='1'/>
+            {/* <Grid.Column width='5'>
+
+              <Link className='link2' to='/projects/mines'>
+                <Image  className='screenshot' rounded src={mines}></Image>
+                <div className='name'><br />Minesweeper</div>
+              </Link>
+            </Grid.Column> */}
+          </Grid.Row>
         </Grid>
+
 
       </div>
 

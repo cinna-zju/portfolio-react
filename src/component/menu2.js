@@ -16,19 +16,10 @@ export default class Menubar extends React.Component {
 
     return (
       <div>
-        <Menu borderless secondary size='large'>
-          <Menu.Item name='home' active={activeItem === 'home'} >
-            <Link to='/' className='link'><div>HOME</div></Link>
-          </Menu.Item>
-          <Menu.Item name='design' active={activeItem === 'design'} >
-            <Link to='/projects' className='link'><div className='ti'>PROJECTS</div>  </Link>
-          </Menu.Item>
-
-          <Menu.Item name='code' active={activeItem === 'code'} >
-            <Link to='/code' className='link'><div className='ti'>blahhh</div></Link>
-
-          </Menu.Item>
-
+        <Menu secondary size='large' color={this.props.color}>
+          <Menu.Item as={Link} to='/' name='home' active={activeItem === 'home'} >HOME</Menu.Item>
+          <Menu.Item as={Link} to='/projects' name='design' active={activeItem === 'design'} >PROJECTS</Menu.Item>
+          <Menu.Item as={Link} to='/photo' name='photo' active={activeItem === 'photo'} >PHOTOS</Menu.Item>
         </Menu>
       </div>
     )
