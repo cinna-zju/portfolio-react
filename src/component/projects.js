@@ -18,7 +18,7 @@ export default class Projects extends React.Component {
     return (
       <div>
 
-        <Grid>
+        <Grid padded='vertically'>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
@@ -26,6 +26,7 @@ export default class Projects extends React.Component {
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
+
 
           <Grid.Row>
             <Grid.Column width={1} />
@@ -37,7 +38,6 @@ export default class Projects extends React.Component {
           </Grid.Row>
           {/* ENFP-A */}
 
-          <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>

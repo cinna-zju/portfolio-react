@@ -12,6 +12,7 @@ import Splash from './component/splash'
 
 import { Router, Route } from 'react-router-dom';
 import history from './history'
+import ScrollToTop from './scroll'
 
 
 
@@ -22,19 +23,15 @@ class App extends Component {
       <Router history={history}>
         <div>
           <Route path="/" component={Home} exact></Route>
-          <Route path="/projects" component={Projects} exact></Route>
-          <Route path="/projects/map" component={Map}></Route>
+          <ScrollToTop path="/projects" component={Projects} exact></ScrollToTop>
+          <ScrollToTop path="/projects/map" component={Map}></ScrollToTop>
 
-          <Route path="/photo" component={Photo} exact></Route>
-          <Route path="/projects/sofc" component={Sofc}></Route>
-          <Route path="/projects/mines" component={Mines}></Route>
-          <Route path="/projects/affectiva" component={Affectiva}></Route>
-          <Route path="/projects/infovis" component={Infovis}></Route>
-          <Route path="/projects/splash" component={Splash}></Route>
-
-
-
-
+          <ScrollToTop path="/photo" component={Photo} exact></ScrollToTop>
+          <ScrollToTop path="/projects/sofc" component={Sofc}></ScrollToTop>
+          <ScrollToTop path="/projects/mines" component={Mines}></ScrollToTop>
+          <ScrollToTop path="/projects/affectiva" component={Affectiva}></ScrollToTop>
+          <ScrollToTop path="/projects/infovis" component={Infovis}></ScrollToTop>
+          <ScrollToTop path="/projects/splash" component={Splash}></ScrollToTop>
         </div>
 
       </Router>

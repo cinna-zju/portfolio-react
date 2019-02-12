@@ -7,6 +7,9 @@ import './font.css'
 import paper from '../img/map/paper.jpg'
 import hifi from '../img/map/hifi_map2.png'
 
+import mines from '../img/mine.png'
+
+
 export default class Map extends React.Component {
 
   render() {
@@ -41,7 +44,7 @@ export default class Map extends React.Component {
           <Grid.Column width='3' />
           <Grid.Column width='10'><Container textAlign='justified'>
             <p>
-              This is a project of a one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
+              This is a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
               taught by Prof. Wendy Mackay at Université Paris Sud. We re-designed a map App for mobile phone to help non-local travellers create their own itinerary quickly.
               </p>
 
@@ -160,8 +163,8 @@ export default class Map extends React.Component {
           <Grid.Column width='10'><Container><p>
             Help non-local travellers create their own itinerary quickly based on an highly interactive map.<br />
             In the past, it is very common to draw and mark something on a paper map. 
-            So we want to bring this idea to the mobile device. Users can draw something on the map to create their itinerary.
-
+            So we want to bring this kind of experience to the mobile device. 
+            Users can select places and arrange the visiting order by drawing on the map and create their itinerary.
           </p>
           </Container></Grid.Column>
         </Grid.Row>
@@ -318,7 +321,7 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'><p>
-            We made and tested our paper prototype.
+            We made our paper prototype using transparent clipboard to simulate the interaction process.
             </p></Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -345,13 +348,12 @@ export default class Map extends React.Component {
 
             <p>Here are some points we got from this walkthrough.<br /><br />
 
-            - Location Reuse: Search history, history point(Drag), start and destination point(Drag)<br />
-            - Activity Reification: activity selector -> 'bakcpack' ->  bar<br />
-            - Events Polymorphism<br />
+            - Location Reuse: Search history, exsited point<br />
+            - Location Reification: Location selector -> 'bakcpack' -> side bar<br />
             - Place Polymorphism<br />
-            - Place Reuse: favorite<br />
-            - Event Reification: delete, revise<br />
-            - Route Reuse: card view in the itinerary
+            {/* - Place Reuse: favorite<br /> */}
+            - Event Reification: Delete, modify duration<br />
+            {/* - Route Reuse: card view in the itinerary */}
             </p></Grid.Column>
         </Grid.Row>
 
@@ -393,6 +395,19 @@ export default class Map extends React.Component {
           <Grid.Column width='3' />
           <Grid.Column width='10'>
             <Image src={hifi} rounded />
+          </Grid.Column>
+        </Grid.Row>
+
+
+        <Grid.Row>
+          <Grid.Column width='12' />
+
+          <Grid.Column width='3' textAlign='right'>
+          <p className='t1'>NEXT</p>          
+            
+            <Link className='link2' to='/projects/mines'>
+                <Image  className='screenshot' rounded src={mines}></Image>
+              </Link>
           </Grid.Column>
         </Grid.Row>
 
