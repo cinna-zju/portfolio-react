@@ -14,6 +14,7 @@ export default class Map extends React.Component {
 
   render() {
 
+
     return (
       <Grid padded='vertically'>
         <Grid.Row>
@@ -30,48 +31,42 @@ export default class Map extends React.Component {
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column width='10' textAlign='right'><p className='intro'>A map-based itinenary App designed for city traveller</p></Grid.Column>
+          <Grid.Column width='10' textAlign='right'><p>A map-based itinenary App designed for city traveller</p></Grid.Column>
         </Grid.Row>
 
         <Grid.Row />
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column><div className='t2'>Background</div></Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column width='10'><Container textAlign='justified'>
+          <Grid.Column width='10'>
+            <p><b>BACKGROUND</b></p>
+            <Container textAlign='justified'>
             <p>
               This is a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
               taught by Prof. Wendy Mackay at Université Paris Sud. We re-designed a map App for mobile phone to help non-local travellers create their own itinerary quickly.
               </p>
 
             <p>Our team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU. We discussed and did the project together.</p>
-          </Container></Grid.Column>
-        </Grid.Row>
+            </Container></Grid.Column>
 
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='12'><div className='t2'>Breakdown Analysis</div></Grid.Column>
         </Grid.Row>
 
         <Grid.Row >
           <Grid.Column width='3' />
-          <Grid.Column width='10'><p>
+          <Grid.Column width='10'>
+          <p><b>BREAKDOWN</b></p>
+            
+            <p>
             We interviewed eight users, mainly university students in different domains about their story of using Google Maps. Some questions we asked are the following:<br />
             - Do you remember the experience using Google Maps last time?<br />
             - Can you show me what did you do?<br/>
-            - Is there anything unexpected happened?<br/>
-            Then we got these breakdowns.<br />
-            <br />
+            - Is there anything unexpected happened?</p>
+            <p>Then we got these breakdowns.<br/>
+            
             - Spend a lot of time making an itinenary before travel<br />
             - Unexpected translation for place name<br />
             - Hard to notice metro or bus direction<br />
             - Check routes a lot of times<br />
-            <br />
           </p>
           </Grid.Column>
         </Grid.Row>
@@ -399,16 +394,19 @@ export default class Map extends React.Component {
         </Grid.Row>
 
 
-        <Grid.Row>
-          <Grid.Column width='12' />
+        <Grid.Row verticalAlign='middle'>
+          <Grid.Column width='11' />
 
-          <Grid.Column width='3' textAlign='right'>
-          <p className='t1'>NEXT</p>          
-            
-            <Link className='link2' to='/projects/mines'>
+          <Grid.Column width='3'>
+          <Link className='link2' to='/projects/mines'>
                 <Image  className='screenshot' rounded src={mines}></Image>
               </Link>
           </Grid.Column>
+
+          <Grid.Column width='1' textAlign='right'>
+            <p className='next'>></p> 
+          </Grid.Column>
+            
         </Grid.Row>
 
       </Grid>

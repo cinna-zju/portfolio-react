@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid} from 'semantic-ui-react'
 import Menubar from './menu2'
 import Zmage from 'react-zmage'
 

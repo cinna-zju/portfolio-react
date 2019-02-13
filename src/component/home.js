@@ -44,8 +44,8 @@ export default class Home extends React.Component {
         <Grid.Row>
           <Grid.Column width={1} />
           <Grid.Column width={8}>
-            <p className='preface'>Bonjour, <br />I'm Shuo,<br />
-              a <Popup size='large' position='bottom left' trigger={<u>HCID</u>}>Human Computer Interaction and Design</Popup> student.</p>
+            <p className='preface'>Bonjour, <br />I'm <a>Shuo</a>,<br />
+              a HCID student.</p>
           </Grid.Column>
         </Grid.Row>
         {/* ENFP-A */}
@@ -110,7 +110,7 @@ export default class Home extends React.Component {
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<u>travelling</u>}><Image size='massive' src={map} /></Popup> and want to experience more.
+            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<a>travelling</a>}><Image size='massive' src={map} /></Popup> and want to experience more.
             <br />Hope to set foot on all the seven continents.</p>
           </Grid.Column>
           <Grid.Column width='1' />

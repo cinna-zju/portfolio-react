@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image, Label} from 'semantic-ui-react'
 import Menubar from './menu2'
 import { Link } from 'react-router-dom'
 
@@ -58,17 +58,31 @@ export default class Projects extends React.Component {
 
             <Grid.Column width='5'>
               <Link className='link2' to='./projects/map'>
+                  
                 <Image className='screenshot' rounded src={map}></Image>
-                <div className='name'><br />Cityller</div>
+                <div className='name'>
+                  <Label color='teal' horizontal size='large' basic>Design</Label>Cityller
+
+                </div>
+
+
+                
+
               </Link>
+
             </Grid.Column>
             <Grid.Column width='1'/>
             <Grid.Column width='5'>
+            <Link className='link2' to='./projects/splash'>
+                <Image className='screenshot' rounded src={splash}></Image>
+                <div className="name">
+                <Label color='teal' horizontal size='large' basic>Design</Label>
+                <Label color='yellow' horizontal size='large' basic>Code</Label>Splash!                
+                </div>
 
-              <Link className='link2' to='/projects/mines'>
-                <Image  className='screenshot' rounded src={mines}></Image>
-                <div className='name'><br />Minesweeper</div>
               </Link>
+
+
             </Grid.Column>
           </Grid.Row>
 
@@ -85,19 +99,29 @@ export default class Projects extends React.Component {
 
 
             <Grid.Column width='5'>
-              <Link className='link2' to='/projects/affectiva'>
-                <Image className='screenshot' rounded src={aff}></Image>
-                <div className='name'><br />Emotion Detection</div>
+            <Link className='link2' to='/projects/infovis'>
+                <Image className='screenshot' rounded src={info}></Image>
+                <div className='name'>
+                <Label color='teal' horizontal size='large' basic>Design</Label>
+                  <Label color='yellow' horizontal size='large' basic>Code</Label>
+                Transition Data Visualization
+                </div>
+                
+
               </Link>
+
+
             </Grid.Column>
 
             <Grid.Column width='1' />
             
             <Grid.Column width='5'>
-              <Link className='link2' to='/projects/infovis'>
-                <Image className='screenshot' rounded src={info}></Image>
-                <div className='name'><br />Visualization</div>
+            <Link className='link2' to='/projects/mines'>
+                <Image  className='screenshot' rounded src={mines}></Image>
+                <div className='name'>
+                <Label color='yellow' horizontal size='large' basic>Code</Label>Minesweeper</div>
               </Link>
+
             </Grid.Column>
 
 
@@ -107,10 +131,12 @@ export default class Projects extends React.Component {
             <Grid.Column width='2'></Grid.Column>
 
             <Grid.Column width='5'>
-              <Link className='link2' to='./projects/splash'>
-                <Image className='screenshot' rounded src={splash}></Image>
-                <div className='name'><br />Splash</div>
+            <Link className='link2' to='/projects/affectiva'>
+                <Image className='screenshot' rounded src={aff}></Image>
+                <div className='name'>
+                <Label color='blue' horizontal size='large' basic>Machine learning</Label>Emotion Detection</div>
               </Link>
+
             </Grid.Column>
             <Grid.Column width='1'/>
             {/* <Grid.Column width='5'>

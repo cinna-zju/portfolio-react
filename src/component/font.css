@@ -1,25 +1,26 @@
-body{
-  font-family: 'roboto';
-  
-}
+
 
 .t1{
-  font-size: 3em;
+  font-size: 2.25em;
   line-height: 1.5em;
 
+}
+
+.next{
+  font-size: 6em;
 }
 
 
 
 .t2{
   font-size: 1.75em;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 
 
 .tl_text{
-  font-size: 1em;
+  font-size: 16px;
   color: grey;
 }
 
@@ -29,7 +30,15 @@ body{
 }
 
 p{
-  font-size: 16px;
+  /* margin-top: 1.67em;
+  line-height: 1.67em; */
+  font-size: 18px;
+  margin-bottom: 0;
+  text-align: justify;
+  word-spacing: 2px;
+
+
+  
 }
 
 .link2 {
@@ -38,7 +47,7 @@ p{
 }
 
 .link2:hover {
-  color:#2277ba;
+  color:#333333;
 
 }
 
@@ -51,13 +60,15 @@ p{
 }
 
 .screenshot{
-  box-shadow: 0 1px 2px rgba(22,120,175,0.15);
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 12px 65px 2px rgba(41,99,255,0), 0 1px 2px 1px rgba(41,99,255,0);
+    transition: box-shadow .25s ease-in;
+    -moz-transition: box-shadow .25s ease-in;
+    -webkit-transition: box-shadow .25s ease-in;
 
 }
 
 .screenshot:hover{
-  box-shadow: 0 5px 15px rgba(22,120,175,0.3);
+  box-shadow: 0 12px 65px 2px rgba(41,99,255,0.30), 0 1px 2px 1px rgba(41,99,255,0.09);
 }
 
 /* .screenshot::after{
@@ -73,7 +84,11 @@ p{
 
 
 .link2 .name{
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-top: 1em;
+  line-height: 1em;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
 

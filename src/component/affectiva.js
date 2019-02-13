@@ -29,23 +29,32 @@ export default class Affectiva extends React.Component {
           <Grid.Column width='3' />
           <Grid.Column width='10'>
             <Container textAlign='justified'><p>
-              Affective computing is popular nowadays. Most of these algorithms are built on sigle camera.
+              Affective computing can help computers to understand human. Emotion detection can be 
+              applied to a number of fields such as education, gaming and monitoring. The problem is
+              that most of these algorithms are built on single camera.
               I try to improve the accuracy and robustness by adopting multiple cameras.
               </p>
-              <p>This research was conducted at North Carolina State Univeristy, insturcted by Prof. Edgar Lobaton.
+              <p>The objective are developing a pipeline for processing camera video feeds and 
+                using a model trained from 4 different angles to improve the performance.
+              </p>
+
+              <p>
+              I used Javascript SDK of <a className='link3' href='https://www.affectiva.com/'>Affectiva</a> to recognize the emotion,
+                store these data in webSQL, and used python and sklearn to analyse.
+            </p>
+
+              <p>This research was conducted at North Carolina State Univeristy with Boxuan Zhong and Zikun Qin, insturcted by Prof. Edgar Lobaton.
+                Then we published a paper named "Emotion recognition with facial expressions and physiological signals" on IEEE SSCI 2017.
                 The original paper is <a className='link3' href='https://ieeexplore.ieee.org/abstract/document/8285365'>HERE</a>.
               </p>
-              <p>
-              I use Javascript SDK of <a className='link3' href='https://www.affectiva.com/'>Affectiva</a> to recognize the emotion,
-              store these data in webSQL, and use python and sklearn to analyse.
-            </p>
+
             </Container>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
-          <Grid.Column width='1' />
-          <Grid.Column width='14'>
+          <Grid.Column width='3' />
+          <Grid.Column width='10'>
             <Image src={poster} rounded />
           </Grid.Column>
         </Grid.Row>
