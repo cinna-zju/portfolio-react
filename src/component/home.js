@@ -31,20 +31,18 @@ export default class Home extends React.Component {
 
       <Grid padded='vertically'>
 
-        <Grid.Row>
+<Grid.Row></Grid.Row>
+          <Grid.Row></Grid.Row>
+          <Grid.Row></Grid.Row>
+          <Grid.Row></Grid.Row>
+          <Grid.Row></Grid.Row>
 
-        </Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
 
 
         <Grid.Row>
           <Grid.Column width={1} />
           <Grid.Column width={8}>
-            <p className='preface'>Bonjour, <br />I'm <a>Shuo</a>,<br />
+            <p className='preface'>: ), <br />I'm <a>Shuo</a>,<br />
               a HCID student.</p>
           </Grid.Column>
         </Grid.Row>
@@ -58,7 +56,6 @@ export default class Home extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>

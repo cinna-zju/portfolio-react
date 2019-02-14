@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Home from './component/home'
-import Mines from './component/mines'
 import Map from './component/map'
 import Projects from './component/projects'
 import Photo from './component/photo'
@@ -28,7 +27,6 @@ class App extends Component {
 
           <ScrollToTop path="/photo" component={Photo} exact></ScrollToTop>
           <ScrollToTop path="/projects/sofc" component={Sofc}></ScrollToTop>
-          <ScrollToTop path="/projects/mines" component={Mines}></ScrollToTop>
           <ScrollToTop path="/projects/affectiva" component={Affectiva}></ScrollToTop>
           <ScrollToTop path="/projects/infovis" component={Infovis}></ScrollToTop>
           <ScrollToTop path="/projects/splash" component={Splash}></ScrollToTop>

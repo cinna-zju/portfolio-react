@@ -1,8 +1,8 @@
 import React from 'react'
-import { Grid, Image, Breadcrumb, Embed } from 'semantic-ui-react'
+import { Grid, Image, Breadcrumb, Embed, ButtonContent } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
-import './font.css'
+// import './font.css'
 
 import main from '../img/infovis/main.png'
 // import group from '../img/infovis/group.png'
@@ -17,8 +17,9 @@ import group from '../img/infovis/group.mov'
 export default class Infovis extends React.Component {
   render() {
     const bg = {
-      backgroundColor: "#232323",
+      backgroundColor: "#333333",
       color: "#bababa"
+      
     }
 
     const shadow = {
@@ -46,13 +47,13 @@ export default class Infovis extends React.Component {
     }
 
     const color = {
-      color: "#ffffff"
+      color: "#ffffff",
     }
 
 
     return (
 
-      <Grid padded='vertically' style={bg}>
+      <Grid padded='vertically' style={bg} className="reversed">
 
         <Grid.Row>
           <Grid.Column width='3' />

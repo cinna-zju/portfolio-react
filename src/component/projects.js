@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 import './font.css'
 import map from '../img/map.png'
-import mines from '../img/mine.png'
 import aff from '../img/aff.png'
 import info from '../img/infovis.png'
 import splash from '../img/splash.png'
@@ -25,7 +24,6 @@ export default class Projects extends React.Component {
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
 
 
           <Grid.Row>
@@ -38,7 +36,6 @@ export default class Projects extends React.Component {
           </Grid.Row>
           {/* ENFP-A */}
 
-          <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
@@ -116,21 +113,6 @@ export default class Projects extends React.Component {
             <Grid.Column width='1' />
             
             <Grid.Column width='5'>
-            <Link className='link2' to='/projects/mines'>
-                <Image  className='screenshot' rounded src={mines}></Image>
-                <div className='name'>
-                <Label color='yellow' horizontal size='large' basic>Code</Label>Minesweeper</div>
-              </Link>
-
-            </Grid.Column>
-
-
-          </Grid.Row>
-
-          <Grid.Row >
-            <Grid.Column width='2'></Grid.Column>
-
-            <Grid.Column width='5'>
             <Link className='link2' to='/projects/affectiva'>
                 <Image className='screenshot' rounded src={aff}></Image>
                 <div className='name'>
@@ -138,15 +120,9 @@ export default class Projects extends React.Component {
               </Link>
 
             </Grid.Column>
-            <Grid.Column width='1'/>
-            {/* <Grid.Column width='5'>
-
-              <Link className='link2' to='/projects/mines'>
-                <Image  className='screenshot' rounded src={mines}></Image>
-                <div className='name'><br />Minesweeper</div>
-              </Link>
-            </Grid.Column> */}
           </Grid.Row>
+
+
         </Grid>
 
 

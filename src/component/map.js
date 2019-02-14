@@ -1,168 +1,84 @@
 import React from 'react'
-import { Grid, Image, Divider, Container, Breadcrumb } from 'semantic-ui-react'
+import { Grid, Image, Breadcrumb, Table } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import Zmage from 'react-zmage'
+
 
 import './font.css'
 
+import p1 from '../img/map/p1.png'
+import p2 from '../img/map/p2.png'
+import p3 from '../img/map/p3.png'
+
+
 import paper from '../img/map/paper.jpg'
 import hifi from '../img/map/hifi_map2.png'
-
-import mines from '../img/mine.png'
-
 
 export default class Map extends React.Component {
 
   render() {
 
-
     return (
-      <Grid padded='vertically'>
+      <Grid padded='vertically' padded='horizontally' className='proj'>
         <Grid.Row>
           <Grid.Column width='3' />
 
           <Grid.Column textAlign='left' width='12'>
             <Breadcrumb>
-              <Breadcrumb.Section link><Link to='/projects'>PROJECTS</Link></Breadcrumb.Section>
+              <Breadcrumb.Section><Link to='/projects'>PROJECTS</Link></Breadcrumb.Section>
               <Breadcrumb.Divider />
               <Breadcrumb.Section active><div className='t1' >Cityller</div></Breadcrumb.Section>
             </Breadcrumb>
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column width='10' textAlign='right'><p>A map-based itinenary App designed for city traveller</p></Grid.Column>
-        </Grid.Row>
 
         <Grid.Row />
 
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p><b>BACKGROUND</b></p>
-            <Container textAlign='justified'>
-            <p>
-              This is a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'> 2018 HCI bootcamp </a>
-              taught by Prof. Wendy Mackay at Université Paris Sud. We re-designed a map App for mobile phone to help non-local travellers create their own itinerary quickly.
+            <p>Cityller, combination of city and traveller,
+               is a map App bringing back on-paper experience to help non-local travellers create their own itinerary quickly.
               </p>
+            <p>In the past, it is very common to draw and mark something on a paper map.
+            So we want to bring this kind of experience to the mobile device.
+            Users can select places and arrange the visiting order by drawing on the map and create their itinerary.</p>
 
-            <p>Our team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU. We discussed and did the project together.</p>
-            </Container></Grid.Column>
+            <p>This is a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'>2018 HCI bootcamp</a> taught by Prof. Wendy Mackay at Université Paris Sud. Our team also includes Yuanyang ZHONG, Qiwei GAO, Lemeng XU. We discussed and did the project together.</p>
+          </Grid.Column>
 
         </Grid.Row>
 
+
+        <Grid.Row>
+          <Grid.Column width='3' />
+          <Grid.Column textAlign='left' width='10'><div className='t2'>User research</div></Grid.Column>
+        </Grid.Row>
         <Grid.Row >
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-          <p><b>BREAKDOWN</b></p>
+            <p>We interviewed eight users, mainly university students，using <b>critic incident interview</b>.
+            Some questions we asked are like 'Do you remember the experience using Google Maps last time?', 'Can you show me what did you do?' and 'Is there anything unexpected happened?'.</p>
+
+            <p>We analyzed the interviews and got some breakdowns.
+              Users spent a lot of time making an itinenary before travel and checked routes a lot of times.</p>
             
-            <p>
-            We interviewed eight users, mainly university students in different domains about their story of using Google Maps. Some questions we asked are the following:<br />
-            - Do you remember the experience using Google Maps last time?<br />
-            - Can you show me what did you do?<br/>
-            - Is there anything unexpected happened?</p>
-            <p>Then we got these breakdowns.<br/>
-            
-            - Spend a lot of time making an itinenary before travel<br />
-            - Unexpected translation for place name<br />
-            - Hard to notice metro or bus direction<br />
-            - Check routes a lot of times<br />
-          </p>
+              <p>We brainstormed about what are the common problems they have and created 3 personas to represent the common property users of our products.
+              And Jack was an extreme personna we used to test the usability and helped us find problems.</p>
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='12'><div className='t2'>User Profile & Personas </div></Grid.Column>
+        <Grid.Row/>
+        <Grid.Row columns='3'>
+          <Grid.Column><Image src={p1} /></Grid.Column>
+          <Grid.Column><Image src={p2} /></Grid.Column>
+          <Grid.Column><Image src={p3} /></Grid.Column>
         </Grid.Row>
-
-        <Grid.Row >
-          <Grid.Column width='3' />
-          <Grid.Column width='10'><p>
-            Then we got the user profile from the common points of our interviewees.<br />
-            <br />
-            Non-local tourist<br />
-            - make an rough itinerary before travel<br />
-            - familiar with phone<br/>
-            - only use map apps to navigate while travelling<br/>
-            </p>
-            <p>Then we create 3 personas to represent users of our products.
-              And Jack is an extreme personna we used to test the usability.</p>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column width='2' textAlign='center'>
-            <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' circular />
-            <p className='intro'>Jack<br /></p>
-          </Grid.Column>
-
-          <Grid.Column width='8'>
-            <p>Jack is a travel blog writer who travels a lot. This time, he is going to Paris to write a
-                series of articles about life in Paris.</p>
-            <p>BEHAVIOR</p>
-              <p>- Interesed in non-popular but beautiful sites<br/>
-              - Often change his itinenary<br />
-              - Have a lot of places to visit<br/>
-            - Want to make his itinerary as soon as possible</p>
-            
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row><Grid.Column width='3' /><Grid.Column width='10'><Divider /></Grid.Column></Grid.Row>
-
-        <Grid.Row >
-          <Grid.Column width='3' />
-          <Grid.Column width='2' textAlign='center'>
-            <Image src='https://react.semantic-ui.com/images/avatar/large/molly.png' circular />
-            <p className='intro'>Gabrielle<br /></p>
-          </Grid.Column>
-          <Grid.Column width='8'>
-              <p>Gabrielle is a foreign student in UK.  She likes Jack's blog.
-              This time, she wants to meet Jack in Paris and travel with Jack.
-                But She wants to make her itinerary more quickly when she is going to travel.</p>
-            <p>BEHAVIOR</p>
-              <p>- Not travel too much</p>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row><Grid.Column width='3' /><Grid.Column width='10'><Divider /></Grid.Column></Grid.Row>
+        <Grid.Row/>
 
 
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column width='2' textAlign='center'>
-            <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' circular />
-            <p className='intro'>Ekko<br /></p>
-          </Grid.Column>
 
-          <Grid.Column width='8'>
-            <p>
-              Ekko is a local guide at Paris. He knows some intersting but unpopular places.</p>
-            <p>BEHAVIOR</p>
-              <p>- Know some place unusual</p>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row><Divider /></Grid.Row>
-
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'><div className='t2'>Design Concept</div></Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row >
-          <Grid.Column width='3' />
-          <Grid.Column width='10'><Container><p>
-            Help non-local travellers create their own itinerary quickly based on an highly interactive map.<br />
-            In the past, it is very common to draw and mark something on a paper map. 
-            So we want to bring this kind of experience to the mobile device. 
-            Users can select places and arrange the visiting order by drawing on the map and create their itinerary.
-          </p>
-          </Container></Grid.Column>
-        </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
@@ -187,7 +103,7 @@ export default class Map extends React.Component {
 
 
 
-        {/* <Grid.Row>
+        <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column textAlign='left' width='10'><div className='t2'>Design Space</div></Grid.Column>
           </Grid.Row>
@@ -222,9 +138,9 @@ export default class Map extends React.Component {
             <Grid.Column width='4'><p>Less Natural</p>
               <p>Click the point to add it to the 'backpack'
               </p></Grid.Column>
-          </Grid.Row> */}
+          </Grid.Row>
 
-        {/* <Grid.Row>
+        <Grid.Row>
             <Grid.Column width='3' />
             <Grid.Column textAlign='left' width='10'><div className='t2'>Functional Table</div></Grid.Column>
           </Grid.Row>
@@ -307,7 +223,7 @@ export default class Map extends React.Component {
                 </Table.Body>
               </Table>
             </Grid.Column>
-          </Grid.Row> */}
+          </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
@@ -343,12 +259,12 @@ export default class Map extends React.Component {
 
             <p>Here are some points we got from this walkthrough.<br /><br />
 
-            - Location Reuse: Search history, exsited point<br />
-            - Location Reification: Location selector -> 'bakcpack' -> side bar<br />
-            - Place Polymorphism<br />
-            {/* - Place Reuse: favorite<br /> */}
-            - Event Reification: Delete, modify duration<br />
-            {/* - Route Reuse: card view in the itinerary */}
+              - Location Reuse: Search history, exsited point<br />
+              - Location Reification: Location selector -> 'bakcpack' -> side bar<br />
+              - Place Polymorphism<br />
+              {/* - Place Reuse: favorite<br /> */}
+              - Event Reification: Delete, modify duration<br />
+              {/* - Route Reuse: card view in the itinerary */}
             </p></Grid.Column>
         </Grid.Row>
 
@@ -365,7 +281,7 @@ export default class Map extends React.Component {
             3. Delete<br />
             4. Drag bottom line to set duration of event<br />
             5. Draw line to select and order<br />
-            </p></Grid.Column>
+          </p></Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
@@ -395,18 +311,14 @@ export default class Map extends React.Component {
 
 
         <Grid.Row verticalAlign='middle'>
-          <Grid.Column width='11' />
+          <Grid.Column width='2' />
 
-          <Grid.Column width='3'>
-          <Link className='link2' to='/projects/mines'>
-                <Image  className='screenshot' rounded src={mines}></Image>
-              </Link>
-          </Grid.Column>
+
 
           <Grid.Column width='1' textAlign='right'>
-            <p className='next'>></p> 
+            <p className='next'>></p>
           </Grid.Column>
-            
+
         </Grid.Row>
 
       </Grid>

@@ -28,7 +28,6 @@ export default class Photo extends React.Component {
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
-        <Grid.Row></Grid.Row>
 
 
         <Grid.Row>
@@ -41,7 +40,6 @@ export default class Photo extends React.Component {
 
         {/* ENFP-A */}
 
-        <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
         <Grid.Row></Grid.Row>
