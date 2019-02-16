@@ -1,7 +1,8 @@
 import React from 'react'
 import { Grid, Icon, Popup, Image, Header } from 'semantic-ui-react'
 import Menubar from './menu2'
-// import { Link } from 'react-router-dom'
+import Typed from 'react-typed'
+import resume from '../resume.pdf'
 
 import './font.css'
 
@@ -21,36 +22,51 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const hh1 = {
-      color: 'grey',
-      fontSize: '6em',
 
-    }
+    
 
     return (
 
       <Grid padded='vertically'>
 
-<Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
-          <Grid.Row></Grid.Row>
+        <Grid.Row></Grid.Row>
+        <Grid.Row></Grid.Row>
+        <Grid.Row></Grid.Row>
+        <Grid.Row></Grid.Row>
+        <Grid.Row></Grid.Row>
 
 
 
         <Grid.Row>
           <Grid.Column width={1} />
           <Grid.Column width={8}>
-            <p className='preface'>: ), <br />I'm <a>Shuo</a>,<br />
-              a HCID student.</p>
+            <p className='preface'>
+              <Typed
+                strings={[
+                  ':)',
+                  'Hello,',
+                  '你好，',
+                  'Bonjour,',
+                  ]}
+                typeSpeed={80}
+                backSpeed={60}
+                loop
+                showCursor={false}
+              >
+                <span></span>
+              </Typed>
+              <br />I'm <a href={resume}>Shuo</a>,<br />
+              a HCID student.
+            </p>
+
+
           </Grid.Column>
         </Grid.Row>
         {/* ENFP-A */}
         <Grid.Row>
-        <Grid.Column width='1' />
+          <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <Header icon='linkedin' color='grey' as='a' />
+            <Header icon='linkedin' color='grey' as='a' href="https://www.linkedin.com/in/shuoyang-en/" />
             <Header icon='github' color='grey' as='a' href='https://github.com/cinna-zju'></Header>
 
           </Grid.Column>
@@ -72,15 +88,11 @@ export default class Home extends React.Component {
 
 
         <Grid.Row></Grid.Row>
-        
-        <Grid.Row>
-          <Grid.Column width='16' textAlign='center'><div style={hh1}>WHO AM I?</div></Grid.Column>
-        </Grid.Row>
+        <Grid.Row></Grid.Row>
 
-        <Grid.Row />
-        <Grid.Row />
-        <Grid.Row />
-        <Grid.Row />
+
+
+
 
         <Grid.Row verticalAlign='middle'>
           <Grid.Column width='1' />
@@ -107,7 +119,7 @@ export default class Home extends React.Component {
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<a>travelling</a>}><Image size='massive' src={map} /></Popup> and want to experience more.
+            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<u>travelling</u>}><Image size='massive' src={map} /></Popup> and want to experience more.
             <br />Hope to set foot on all the seven continents.</p>
           </Grid.Column>
           <Grid.Column width='1' />
@@ -145,13 +157,13 @@ export default class Home extends React.Component {
 
         <Grid.Column width='1' />
         <Grid.Column width='4'>
-          <p className="tl_text"><br />Studied optics, electronics and programming at Zhejiang University.
-            <br />Now, master student of EIT Digital Academy. First year at Université Paris Sud, France</p>
+          <p className="tl_text"><br />Studied optics, electronics and programming at <a href='https://www.zju.edu.cn'>Zhejiang University</a>.
+            <br />Now, master student of <a href='https://www.eitdigital.eu/'>EIT Digital Academy</a>. First year at Université Paris Sud, France</p>
         </Grid.Column>
 
         <Grid.Column width='1' />
         <Grid.Column width='4'>
-          <p className="tl_text"><br /> A designer and a front-end coder.</p>
+          <p className="tl_text"><br /> A UX designer and a front-end coder.<br/>Sketch, Photoshop<br/>HTML/CSS/Javascript, React, python </p>
         </Grid.Column>
         <Grid.Column width='1' />
         <Grid.Column width='4'>

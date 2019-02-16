@@ -33,7 +33,7 @@ export default class Photo extends React.Component {
         <Grid.Row>
           <Grid.Column width={1} />
           <Grid.Column width={8}>
-            <p className='preface'>Camera<br/>is the third eye to<br/>see the world
+            <p className='preface'>Camera<br/>is the third <a href="https://instagram.com/cinnazju/">eye</a> to<br/>see the world
              </p>
           </Grid.Column>
         </Grid.Row>

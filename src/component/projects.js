@@ -17,7 +17,7 @@ export default class Projects extends React.Component {
     return (
       <div>
 
-        <Grid padded='vertically'>
+        <Grid padded='vertically' relaxed>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
           <Grid.Row></Grid.Row>
@@ -50,21 +50,17 @@ export default class Projects extends React.Component {
             </Grid.Column>
           </Grid.Row>
 
+          <Grid.Row></Grid.Row>
+          
           <Grid.Row >
             <Grid.Column width='2'></Grid.Column>
 
             <Grid.Column width='5'>
               <Link className='link2' to='./projects/map'>
-                  
                 <Image className='screenshot' rounded src={map}></Image>
                 <div className='name'>
                   <Label color='teal' horizontal size='large' basic>Design</Label>Cityller
-
                 </div>
-
-
-                
-
               </Link>
 
             </Grid.Column>

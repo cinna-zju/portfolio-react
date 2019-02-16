@@ -7,7 +7,6 @@ import './font.css'
 import scenario from '../img/splash/scenario.png'
 import phone from '../img/splash/mobile.png'
 import ink from '../img/splash/ink.png'
-import desk from '../img/splash/desk.mov'
 
 
 

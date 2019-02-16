@@ -22,6 +22,7 @@ class App extends Component {
       <Router history={history}>
         <div>
           <Route path="/" component={Home} exact></Route>
+
           <ScrollToTop path="/projects" component={Projects} exact></ScrollToTop>
           <ScrollToTop path="/projects/map" component={Map}></ScrollToTop>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Breadcrumb, Embed, ButtonContent } from 'semantic-ui-react'
+import { Grid, Image, Breadcrumb, Embed } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 // import './font.css'
