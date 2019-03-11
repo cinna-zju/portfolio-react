@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Breadcrumb, Embed } from 'semantic-ui-react'
+import { Grid, Image, Breadcrumb, Embed, Header, Divider, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 // import './font.css'
@@ -18,7 +18,7 @@ export default class Infovis extends React.Component {
   render() {
     const bg = {
       backgroundColor: "#333333",
-      color: "#bababa"
+      color: "#eeeeee"
       
     }
 
@@ -60,9 +60,9 @@ export default class Infovis extends React.Component {
 
           <Grid.Column textAlign='left' width='12'>
             <Breadcrumb>
-              <Breadcrumb.Section><Link className="link2" to='/projects'>PROJECTS</Link></Breadcrumb.Section>
+              <Breadcrumb.Section><Link to='/projects'>PROJECTS</Link></Breadcrumb.Section>
               <Breadcrumb.Divider />
-              <Breadcrumb.Section active><div className='t1' >Visualization</div></Breadcrumb.Section>
+              <Breadcrumb.Section active><Header as='h1' inverted>Visualization</Header></Breadcrumb.Section>
             </Breadcrumb>
           </Grid.Column>
         </Grid.Row>
@@ -79,7 +79,7 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <div className='t2'>Introduction</div>
+            <Header as="h2" inverted>Introduction</Header>
 
 
             <p>
@@ -109,7 +109,8 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <div className='t2'>Design</div>
+          <Header as="h2" inverted>Design</Header>
+            
             <p>In the class, we learned how to use visual elements, like shape, size, color, shadow, transparancy and motion,
               to represent the data and the relationship behind it.</p>
 
@@ -122,7 +123,10 @@ export default class Infovis extends React.Component {
               we show a different part of the dataset to make the information shown consistent with the view.
               Our visualization is based on the web to provide a better interaction and higher customization.
             </p>
-            <p>In the sketch phase, We used the 10+10 method to come up some ideas. </p>
+            <p>In the sketch phase, we used the <b>10 plus 10 method</b> to come up some ideas.
+            Based on a common starting point, group members work individually to quickly sketch several ideas each,
+            making around 10 ideas per group.
+            They share the ideas within the group and choose one sketch as the starting point for the next round.  </p>
             <Image src={sketch} rounded />
             <p />
 
@@ -133,7 +137,8 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p><b>Color map</b></p>
+            <Header as="h3" inverted>Color map</Header>
+            
             <p> we used the color map of red, yellow, purple and grey to represent different phases of transitions.
               The three colors are clear on the grey background and can attract user's attention.</p>
           </Grid.Column>
@@ -152,8 +157,7 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p><b>Elements</b></p>
-
+            <Header as="h3" inverted>Elements</Header>
           </Grid.Column>
         </Grid.Row>
 
@@ -195,7 +199,8 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p><b>Visual feedback</b></p>
+            <Header as="h3" inverted>Visual feedback</Header>
+
           </Grid.Column>
         </Grid.Row>
 
@@ -217,8 +222,7 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3'></Grid.Column>
           <Grid.Column width='10'>
-            <p><b>Layout</b></p>
-
+            <Header as="h3" inverted>Layout</Header>
             
           </Grid.Column>
         </Grid.Row>
@@ -235,13 +239,22 @@ export default class Infovis extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <div className='t2'>Video Demo</div>
+            <Header as="h2" inverted>Video</Header>
+
             <p>This is a demo video showing the feature and the usage of this platform.</p>
 
             <Embed id='eTaAYefbg_M' source='youtube' brandedUI />
 
           </Grid.Column>
 
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column width='4'/>
+          <Grid.Column width='8' textAlign='center'>
+            <Divider inverted/> 
+            <Link to="/projects"><Button color='grey' inverted>Back to projects</Button></Link>
+          </Grid.Column>
         </Grid.Row>
 
 

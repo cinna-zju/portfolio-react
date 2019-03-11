@@ -44,7 +44,7 @@ p{
 
 
 .link2 {
-  color: #333333;
+  color: #000000;
 
 }
 
@@ -120,5 +120,5 @@ p a:hover {
 }
 
 .reversed{
-  color: #bababa !important;
+  color: #dddddd !important;
 }

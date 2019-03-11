@@ -8,6 +8,7 @@ import Sofc from './component/sofc'
 import Affectiva from './component/affectiva'
 import Infovis from './component/infovis'
 import Splash from './component/splash'
+import Resto from './component/resto'
 
 import { Router, Route } from 'react-router-dom';
 import history from './history'
@@ -31,6 +32,8 @@ class App extends Component {
           <ScrollToTop path="/projects/affectiva" component={Affectiva}></ScrollToTop>
           <ScrollToTop path="/projects/infovis" component={Infovis}></ScrollToTop>
           <ScrollToTop path="/projects/splash" component={Splash}></ScrollToTop>
+          <ScrollToTop path="/projects/resto" component={Resto}></ScrollToTop>
+
         </div>
 
       </Router>

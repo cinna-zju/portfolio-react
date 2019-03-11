@@ -1,12 +1,10 @@
 import React from 'react'
-import { Grid, Icon, Popup, Image, Header } from 'semantic-ui-react'
+import { Grid, Icon, Header } from 'semantic-ui-react'
 import Menubar from './menu2'
 import Typed from 'react-typed'
 import resume from '../resume.pdf'
 
 import './font.css'
-
-import map from '../img/been.jpeg'
 
 export default class Home extends React.Component {
 
@@ -39,24 +37,23 @@ export default class Home extends React.Component {
 
         <Grid.Row>
           <Grid.Column width={1} />
-          <Grid.Column width={8}>
+          <Grid.Column width={10}>
             <p className='preface'>
-              <Typed
+              : )
+              <br />Hi, I'm <a href={resume}>Shuo</a>,<br />
+                <span>a </span>
+                <Typed
                 strings={[
-                  ':)',
-                  'Hello,',
-                  '你好，',
-                  'Bonjour,',
+                  'UX designer',
+                  'coder',
+                  'HCID student'
                   ]}
-                typeSpeed={80}
-                backSpeed={60}
+                typeSpeed={50}
+                backSpeed={30}
                 loop
                 showCursor={false}
               >
-                <span></span>
               </Typed>
-              <br />I'm <a href={resume}>Shuo</a>,<br />
-              a HCID student.
             </p>
 
 
@@ -91,9 +88,6 @@ export default class Home extends React.Component {
         <Grid.Row></Grid.Row>
 
 
-
-
-
         <Grid.Row verticalAlign='middle'>
           <Grid.Column width='1' />
           <Grid.Column width='4' textAlign='center'>
@@ -112,19 +106,19 @@ export default class Home extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row >
+        <Grid.Row>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Grown up in Yichang, China, a city near the 3rd longest river in the world.</p>
+            <p className="tl_text"><br />Grown up in Yichang, China, a city near the 3rd longest river in the world. Begin observing the world since then.</p>
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Love <Popup size='large' position='bottom left' trigger={<u>travelling</u>}><Image size='massive' src={map} /></Popup> and want to experience more.
-            <br />Hope to set foot on all the seven continents.</p>
+            <p className="tl_text"><br />Love travelling and want to experience more.
+            <br />.</p>
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Big fan of Harry Potter.<br />Read Harry Potter book 1 to 6 for 4 times in the summer vacation when I was 12.</p>
+            <p className="tl_text"><br />Big fan of Harry Potter.<br />Read Harry Potter book 1 to 6 for 4 times.</p>
           </Grid.Column>
         </Grid.Row >
 
@@ -163,15 +157,32 @@ export default class Home extends React.Component {
 
         <Grid.Column width='1' />
         <Grid.Column width='4'>
-          <p className="tl_text"><br /> A UX designer and a front-end coder.<br/>Sketch, Photoshop<br/>HTML/CSS/Javascript, React, python </p>
+          <p className="tl_text"><br /> A UX designer and a front-end coder.<br/>Familiar with Sketch, Overflow, Photoshop,<br/>HTML/CSS/Javascript, React, python </p>
         </Grid.Column>
         <Grid.Column width='1' />
         <Grid.Column width='4'>
-          <p className="tl_text"><br /> Lemonade is one of my favorite drink.</p>
+          <p className="tl_text"><br /> Lemonade is one of my favorite drink so I am open-minded.</p>
         </Grid.Column>
         <Grid.Row />
 
+        <Grid.Row/>
 
+        <Grid.Row>
+          <Grid.Column width='16' textAlign='center'>
+
+          </Grid.Column>
+        </Grid.Row>
+
+
+
+        <Grid.Row>
+        <Grid.Column width='5' />
+          <Grid.Column width='6' textAlign='center'>
+            <Header as="h5" color='grey'>
+              Built with love by Shuo with React.<br/>All rights reserved.
+            </Header>
+        </Grid.Column>
+        </Grid.Row>
 
       </Grid >
 

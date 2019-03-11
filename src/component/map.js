@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Breadcrumb, Header } from 'semantic-ui-react'
+import { Grid, Image, Breadcrumb, Header, Divider, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Zmage from 'react-zmage'
 
@@ -58,17 +58,13 @@ export default class Map extends React.Component {
         </Grid.Row>
 
 
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'>
-            <Header as='h2'>User research</Header>
 
-          </Grid.Column>
-        </Grid.Row>
         <Grid.Row >
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p>We interviewed eight users, mainly university students，using <b>story interview</b> method, 
+          <Header as='h2'>Define / user research</Header>
+            
+            <p>We interviewed eight users, mainly university students, using <b>story interview</b> method, 
             by asking a user questions that elicit recent stories about specific events or objects relevant to the design brief.
             The most effective story questions take advantage of human memory,
             asking users to recount a highly memorable event (<i>critical incidents</i>), 
@@ -102,21 +98,21 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='2' />
           <Grid.Column width='12'>
-            <Zmage src={flow} />
+            <Image src={flow} />
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <Header as='h2'>Ideas generation</Header>
+            <Header as='h2'>Ideate</Header>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p>I used the principle of <b>instrumental design</b> to help me generate ideas about interaction.</p>
+            <p>We brainstormed and used the principle of <b>instrumental design</b> to help me generate ideas about interaction.</p>
             <p>Instrumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.
             The idea is dividing things into domain object and instrument.
             The key principles are reification, polymorphism and reuse.
@@ -130,8 +126,8 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='2' />
           <Grid.Column width='12'>
-            <Zmage src={f1} />
-            <Zmage src={f2} />
+            <Image src={f1} />
+            <Image src={f2} />
 
           </Grid.Column>
         </Grid.Row>
@@ -226,26 +222,18 @@ export default class Map extends React.Component {
 
 
         <Grid.Row>
-          <Grid.Column width='2' />
-          <Grid.Column width='12'>
-            <Zmage src={wire} />
+          <Grid.Column width='1' />
+          <Grid.Column width='14'>
+            <Image src={wire} />
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'><Header as="h2">Evaluation</Header></Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column width='10'>
+          <Grid.Column width='4'/>
+          <Grid.Column width='8' textAlign='center'>
+            <Divider/>
+            <Link to="/projects"><Button color='pink'>Back to projects</Button></Link>
           </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column width='3' />
-          <Grid.Column textAlign='left' width='10'><div className='t2'>Improvements</div></Grid.Column>
         </Grid.Row>
 
       </Grid>

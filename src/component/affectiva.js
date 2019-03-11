@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Container, Breadcrumb } from 'semantic-ui-react'
+import { Grid, Image, Container, Breadcrumb, Button, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 import './font.css'
@@ -56,6 +56,14 @@ export default class Affectiva extends React.Component {
           <Grid.Column width='3' />
           <Grid.Column width='10'>
             <Image src={poster} rounded />
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column width='4'/>
+          <Grid.Column width='8' textAlign='center'>
+            <Divider/>
+            <Link to="/projects"><Button color='red' >Back to projects</Button></Link>
           </Grid.Column>
         </Grid.Row>
 
