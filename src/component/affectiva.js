@@ -1,9 +1,8 @@
 import React from 'react'
-import { Grid, Image, Container, Breadcrumb, Button, Divider } from 'semantic-ui-react'
+import { Grid, Container, Breadcrumb, Button, Divider, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 import './font.css'
-
 import poster from '../img/affectiva/poster.jpg'
 
 export default class Affectiva extends React.Component {
@@ -38,13 +37,15 @@ export default class Affectiva extends React.Component {
                 using a model trained from 4 different angles to improve the performance.
               </p>
 
+              <p>Most of the work was about data analysis. I tried to find some patterns from the data of different cameras. </p>
+
               <p>
               I used Javascript SDK of <a className='link3' href='https://www.affectiva.com/'>Affectiva</a> to recognize the emotion,
                 store these data in webSQL, and used python and sklearn to analyse.
             </p>
 
-              <p>This research was conducted at North Carolina State Univeristy with Boxuan Zhong and Zikun Qin, insturcted by Prof. Edgar Lobaton.
-                Then we published a paper named "Emotion recognition with facial expressions and physiological signals" on IEEE SSCI 2017.
+              <p>This research was conducted at North Carolina State Univeristy, USA with Boxuan Zhong and Zikun Qin, insturcted by Edgar Lobaton.
+                Then we published a paper named <i>Emotion recognition with facial expressions and physiological signals</i> on IEEE SSCI 2017.
                 The original paper is <a className='link3' href='https://ieeexplore.ieee.org/abstract/document/8285365'>HERE</a>.
               </p>
 

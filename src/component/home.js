@@ -109,16 +109,15 @@ export default class Home extends React.Component {
         <Grid.Row>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Grown up in Yichang, China, a city near the 3rd longest river in the world. Begin observing the world since then.</p>
+            <p className="tl_text"><br />Grown up in Yichang, China, a city near the 3rd longest river in the world. Curious and began observing the world since then.</p>
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Love travelling and want to experience more.
-            <br />.</p>
+            <p className="tl_text"><br />Love travelling and love new things. Want to experience more.</p>
           </Grid.Column>
           <Grid.Column width='1' />
           <Grid.Column width='4'>
-            <p className="tl_text"><br />Big fan of Harry Potter.<br />Read Harry Potter book 1 to 6 for 4 times.</p>
+            <p className="tl_text"><br />Big fan of Harry Potter. Read Harry Potter book 1 to 6 for 4 times.(<i>The Deathly Hallows</i> was not published then)</p>
           </Grid.Column>
         </Grid.Row >
 
@@ -151,8 +150,7 @@ export default class Home extends React.Component {
 
         <Grid.Column width='1' />
         <Grid.Column width='4'>
-          <p className="tl_text"><br />Studied optics, electronics and programming at <a href='https://www.zju.edu.cn'>Zhejiang University</a>.
-            <br />Now, master student of <a href='https://www.eitdigital.eu/'>EIT Digital Academy</a>. First year at Université Paris Sud, France</p>
+          <p className="tl_text"><br />Studied optics, electronics and programming at <a href='https://www.zju.edu.cn'>Zhejiang University</a>. Now, master student of <a href='https://www.eitdigital.eu/'>EIT Digital Academy</a>, learning <i>human computer interaction and design</i>. First year at Université Paris Sud, France</p>
         </Grid.Column>
 
         <Grid.Column width='1' />
@@ -178,9 +176,9 @@ export default class Home extends React.Component {
         <Grid.Row>
         <Grid.Column width='5' />
           <Grid.Column width='6' textAlign='center'>
-            <Header as="h5" color='grey'>
-              Built with love by Shuo with React.<br/>All rights reserved.
-            </Header>
+            <p className='foot'>
+            © Developed with love by Shuo with React.<br/>All rights reserved.
+            </p>
         </Grid.Column>
         </Grid.Row>
 

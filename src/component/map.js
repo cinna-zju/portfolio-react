@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid, Image, Breadcrumb, Header, Divider, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import Zmage from 'react-zmage'
-
 
 import './font.css'
+
+import draw from '../img/map/map3.jpg'
 
 import p1 from '../img/map/p1.png'
 import p2 from '../img/map/p2.png'
@@ -16,6 +16,7 @@ import f2 from '../img/map/f2.png'
 import add from '../img/map/add.mov'
 import del from '../img/map/del.mov'
 import reorder from '../img/map/reorder.mov'
+import comp from '../img/map/comp.png'
 
 
 
@@ -45,46 +46,51 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p>Cityller, combination of city and traveller,
-               is a map App bringing back on-paper experience to help non-local travellers create their own itinerary quickly.
-              </p>
-            <p>In the past, it is very common to draw and mark something on a paper map.
-            So we want to bring this kind of experience to the mobile device.
-            Users can select places and arrange the visiting order by drawing on the map and create their itinerary.</p>
+            <p>Cityller, combination of city and traveller, is a map App bringing back on-paper experience to help non-local travellers create their own itinerary quickly. 
+              
+            Users can select places and arrange the visiting order by drawing on the map and create their itinerary accordingly.</p>
 
-            <p>This is a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'>2018 HCI bootcamp</a>, taught by Prof. Wendy Mackay at Université Paris Sud. </p>
+            <p>This is originally a project of the one-week workshop <a href='https://ex-situ.lri.fr/workshops/hci-bootcamp-2018'>2018 HCI bootcamp</a>, taught by Wendy Mackay at Université Paris Sud. I worked with Yuanyang ZHONG, Lemeng XU and Qiwei GAO.</p>
           </Grid.Column>
 
         </Grid.Row>
 
+        <Grid.Row/>
 
+        <Grid.Row>
+        <Grid.Column width='3' />
+          <Grid.Column width='10'>
+          <Image src={draw}/>
+            
+        </Grid.Column>
+        </Grid.Row>
+        <Grid.Row/>
 
         <Grid.Row >
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-          <Header as='h2'>Define / user research</Header>
+          <Header as='h2'>User research</Header>
             
             <p>We interviewed eight users, mainly university students, using <b>story interview</b> method, 
             by asking a user questions that elicit recent stories about specific events or objects relevant to the design brief.
-            The most effective story questions take advantage of human memory,
-            asking users to recount a highly memorable event (<i>critical incidents</i>), 
-            describe how they created a specific object, or describe a routine but extremely recent activity. 
-            Some questions we asked are like 'Do you remember the experience using Google Maps last time?', 'Can you tell me what did you do?' and 'Is there anything unexpected happened?'.</p>
+            {/* The most effective story questions take advantage of human memory,
+            asking users to recount a highly memorable event (<i>critical incidents</i>),  */}
+            {/* describe how they created a specific object, or describe a routine but extremely recent activity.  */}</p>
 
-            <p>We analyzed the interviews and got some breakdowns.
-              Users spent a lot of time making an itinenary before travel and checked routes a lot of times.</p>
+            <p>We analyzed the interviews and got some breakdowns. We grouped these breakdowns and found the main two problems.</p>
 
-            <p>We brainstormed about what are the common problems they have and created 3 personas to represent the common property users of our products.
-              And Jon was the extreme personna we used hereto test the usability and helped us find problems. 'Extreme characters' (Djajadiningrat & Gaver, 2000) are those who push the limits of the situation</p>
+            <p><br/><li>Making an itinerary on a map App is difficult</li>
+            <li>Itinerary apps don't offer transportation information</li><br/></p>
+
+            <p>We then created 3 personas to represent the common property of users. And Jon was the <b>extreme personna</b> who push the limits of the situation to test the usability.</p>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row />
-        <Grid.Row>
-          <Grid.Column width='2' />
-          <Grid.Column width='4'><Zmage src={p1} /></Grid.Column>
-          <Grid.Column width='4'><Zmage src={p2} /></Grid.Column>
-          <Grid.Column width='4'><Zmage src={p3} /></Grid.Column>
+        <Grid.Row columns='3'>
+          <Grid.Column><Image src={p1} /></Grid.Column>
+          <Grid.Column><Image src={p2} /></Grid.Column>
+          <Grid.Column><Image src={p3} /></Grid.Column>
         </Grid.Row>
         <Grid.Row />
 
@@ -105,27 +111,29 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <Header as='h2'>Ideate</Header>
+            <Header as='h2'>Brainstorming</Header>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p>We brainstormed and used the principle of <b>instrumental design</b> to help me generate ideas about interaction.</p>
+            <p>We compared the map apps, paper maps and travel plan apps. Then we thought bringing the drawing experience on paper map to the mobile device was a good idea.
+              We brainstormed and used the principle of <b>instrumental design</b> to help us generate ideas about interaction.</p>
+            <Image src={comp}/>
             <p>Instrumental interaction was brought up by Michel Beaudouin-Lafon in his <a className='link3' href='https://dl.acm.org/citation.cfm?id=332473'>paper</a>.
             The idea is dividing things into domain object and instrument.
-            The key principles are reification, polymorphism and reuse.
-            Reification is to turn an operation into an object.
-            Polymorphism is to apply one interaction to different objects.
-            Reuse is to reuse the previous input or conmmand</p>
-            <p>Functional table is a very useful tool for instrumental design.</p>
+            The key principles are reification, polymorphism and reuse.</p>
+            <p><br/><li>Reification is to turn an operation into an object.</li>
+            <li>Polymorphism is to apply one interaction to different objects.</li>
+            <li>Reuse is to reuse the previous input or conmmand</li><br/></p>
+            <p>We listed the <b>interaction table</b> to help us design something instrumental.</p>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
-          <Grid.Column width='2' />
-          <Grid.Column width='12'>
+          <Grid.Column width='3' />
+          <Grid.Column width='10'>
             <Image src={f1} />
             <Image src={f2} />
 
@@ -165,7 +173,7 @@ export default class Map extends React.Component {
 
         <Grid.Row>
           <Grid.Column width='3' />
-          <Grid.Column width='10'><p><b>2. Delete</b><br />Users can simply swipe the bubble out from the sidebar to delete it.</p></Grid.Column>
+          <Grid.Column width='10'><p><b>2. Delete</b><br />Users can simply swipe the bubble out from the sidebar to delete it. The sidebar is the reification of a backpack that users can add, delete and sort their objects.</p></Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
@@ -197,16 +205,12 @@ export default class Map extends React.Component {
         <Grid.Row>
           <Grid.Column width='3' />
           <Grid.Column width='10'>
-            <p>We showed the video to others and get some feedbacks.</p>
-            <p>Then we use <b>generative walkthough</b> to evaluate our product, using the principles of instrument design.</p>
-            <p>Here are some points we got from this walkthrough.<br /><br />
-
-              - Location Reuse: Search history, exsited point<br />
-              - Location Reification: Location selector -> 'bakcpack' -> side bar<br />
-              - Place Polymorphism<br />
-              {/* - Place Reuse: favorite<br /> */}
-              - Event Reification: Delete, modify duration<br />
-              {/* - Route Reuse: card view in the itinerary */}
+            <p>We showed the video to the classmates in the workshop and got some feedbacks.</p>
+            <p>Then we used <b>generative walkthough</b> to evaluate our product, with the principles of instrument design.</p>
+            <p>Here are some points we got from this walkthrough.
+              <li>Location Reuse: search history, exsited point</li>
+              <li>Place reuse: add to favorite</li>
+              <li>Event Reification: paper card</li>
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -222,10 +226,17 @@ export default class Map extends React.Component {
 
 
         <Grid.Row>
-          <Grid.Column width='1' />
-          <Grid.Column width='14'>
+          <Grid.Column width='2' />
+          <Grid.Column width='12'>
             <Image src={wire} />
           </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+        <Grid.Column width='3' />
+          <Grid.Column width='10'>
+            <Header as='h2'>Redesign info card</Header>
+        </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>

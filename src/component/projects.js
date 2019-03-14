@@ -4,11 +4,11 @@ import Menubar from './menu2'
 import { Link } from 'react-router-dom'
 
 import './font.css'
-import map from '../img/map3.jpg'
+import map from '../img/map3.png'
 import aff from '../img/aff.png'
 import info from '../img/infovis.png'
 // import splash from '../img/splash.png'
-import resto from '../img/resto.jpg'
+import resto from '../img/resto.png'
 
 
 
@@ -30,10 +30,8 @@ export default class Projects extends React.Component {
 
           <Grid.Row>
             <Grid.Column width={1} />
-            <Grid.Column width={10}>
-              <p className='preface'>Design something better.<br />
-                <a href='https://github.com/cinna-zju'>Code</a> makes it alive.
-                </p>
+            <Grid.Column width={9}>
+              <p className='preface'>Design something better and<br/>simple</p>
             </Grid.Column>
           </Grid.Row>
           {/* ENFP-A */}
@@ -97,7 +95,6 @@ export default class Projects extends React.Component {
               <Link className='link2' to='/projects/infovis'>
                 <Image className='screenshot' src={info}></Image>
                 <div className='name'>
-                  <Label color='teal' horizontal size='large' basic>Design</Label>
                   <Label color='yellow' horizontal size='large' basic>Visualization</Label>
                   Menu-hotkey Transition
                 </div>

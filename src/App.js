@@ -4,10 +4,8 @@ import Home from './component/home'
 import Map from './component/map'
 import Projects from './component/projects'
 import Photo from './component/photo'
-import Sofc from './component/sofc'
 import Affectiva from './component/affectiva'
 import Infovis from './component/infovis'
-import Splash from './component/splash'
 import Resto from './component/resto'
 
 import { Router, Route } from 'react-router-dom';
@@ -28,10 +26,10 @@ class App extends Component {
           <ScrollToTop path="/projects/map" component={Map}></ScrollToTop>
 
           <ScrollToTop path="/photo" component={Photo} exact></ScrollToTop>
-          <ScrollToTop path="/projects/sofc" component={Sofc}></ScrollToTop>
+          {/* <ScrollToTop path="/projects/sofc" component={Sofc}></ScrollToTop> */}
           <ScrollToTop path="/projects/affectiva" component={Affectiva}></ScrollToTop>
           <ScrollToTop path="/projects/infovis" component={Infovis}></ScrollToTop>
-          <ScrollToTop path="/projects/splash" component={Splash}></ScrollToTop>
+          {/* <ScrollToTop path="/projects/splash" component={Splash}></ScrollToTop> */}
           <ScrollToTop path="/projects/resto" component={Resto}></ScrollToTop>
 
         </div>

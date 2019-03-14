@@ -34,9 +34,9 @@ body{
 
 p{
   
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
-  word-spacing: 2px;
+  word-spacing: 3px;
   
   /* color: rgba(0,0,0,.7); */
 }
@@ -121,4 +121,9 @@ p a:hover {
 
 .reversed{
   color: #dddddd !important;
+}
+
+.foot{
+  font-size: 0.8em;
+  color: #d0d0d0
 }
